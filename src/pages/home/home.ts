@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Http, Headers } from '@angular/http';
 import { NavController } from 'ionic-angular';
 import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
@@ -10,7 +11,7 @@ export class HomePage {
 
   searchForm: FormGroup;
 
-  constructor(public navCtrl: NavController, private formBuilder: FormBuilder) {
+  constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private http:Http) {
     this.searchForm = this.formBuilder.group({
       doctor: ['', Validators.required],
       speciality: [''],
@@ -20,6 +21,12 @@ export class HomePage {
 
   search() {
     console.log(this.searchForm.value);
+    this.http.get('https://wikint.fr/js/services/getEvents.php')
+    .subscribe((res) => {
+      alert(res.json());
+    }, (err) => {
+      alert("Something went wrong !\n\nMake sure your device is connected to internet.");
+    });
   }
 
 }
