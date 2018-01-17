@@ -1,3 +1,54 @@
 page-home {
+  #container{
+    background: -webkit-gradient(#0998df, #a6dbf5);
+    background: -o-linear-gradient(#0998df, #a6dbf5);
+    background: -moz-linear-gradient(#0998df, #a6dbf5);
+    background: linear-gradient(#0998df, #a6dbf5);
 
+    #header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+
+      h1 {
+        margin: 0;
+      }
+
+      ion-icon {
+        font-size: 28px;
+      }
+    }
+
+    #catch-phrase {
+      max-width: 200px;
+      text-align: justify;
+      color: #fff;
+      margin: 30px auto;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 30px auto;
+
+      input, button {
+        width: 100%;
+        border: 0;
+        border-radius: 5px;
+        padding: 13px;
+        margin: 5px 0;
+      }
+      button {
+        background-color: #fdc400;
+        color: #fff;
+        font-size: 1.3em;
+
+        ion-icon {
+          vertical-align: middle;
+          margin-right: 5px;
+          font-weight: bold;
+        }
+      }
+    }
+  }
 }

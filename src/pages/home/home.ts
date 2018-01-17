@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import {Validators, FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'page-home',
@@ -7,8 +8,18 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  searchForm: FormGroup;
 
+  constructor(public navCtrl: NavController, private formBuilder: FormBuilder) {
+    this.searchForm = this.formBuilder.group({
+      doctor: ['', Validators.required],
+      speciality: [''],
+      location: ['', Validators.required]
+    })
+  }
+
+  search() {
+    console.log(this.searchForm.value);
   }
 
 }

@@ -1,14 +1,26 @@
-<ion-header>
+<!--<ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      DoctLib
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
+<ion-content padding id="container">
+  <section id="header">
+    <ion-icon name="menu"></ion-icon>
+    <h1>DoctoLib</h1>
+    <ion-icon name="person"></ion-icon>
+  </section>
+
+  <p id="catch-phrase">
+    Prenez rendez-vous en ligne chez un professionnel de santé
   </p>
+
+  <form [formGroup]="searchForm">
+    <input type="text" placeholder="Médecins, établissement..." formControlName="doctor"/>
+    <input type="text" placeholder="Spécialité" formControlName="speciality"/>
+    <input type="text" placeholder="Où? (Adresse, ville...)" formControlName="location"/>
+    <button (click)="search()"><ion-icon name="search"></ion-icon> Search</button>
+  </form>
 </ion-content>
