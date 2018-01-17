@@ -31,12 +31,13 @@ page-home {
       max-width: 500px;
       margin: 30px auto;
 
-      input, button {
+      input, button, select {
         width: 100%;
         border: 0;
         border-radius: 5px;
         padding: 13px;
         margin: 5px 0;
+        background-color: #fff;
       }
       button {
         background-color: #fdc400;

@@ -13,7 +13,7 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private http:Http) {
     this.searchForm = this.formBuilder.group({
-      doctor: ['', Validators.required],
+      language: ['', Validators.required],
       speciality: [''],
       location: ['', Validators.required]
     })

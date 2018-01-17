@@ -18,9 +18,13 @@
   </p>
 
   <form [formGroup]="searchForm">
-    <input type="text" placeholder="Médecins, établissement..." formControlName="doctor"/>
     <input type="text" placeholder="Spécialité" formControlName="speciality"/>
     <input type="text" placeholder="Où? (Adresse, ville...)" formControlName="location"/>
+    <select formControlName="language">
+      <option value="en">English</option>
+      <option value="ar">العربية</option>
+      <option value="ru">русский</option>
+    </select>
     <button (click)="search()"><ion-icon name="search"></ion-icon> Search</button>
   </form>
 </ion-content>
