@@ -23,7 +23,7 @@ export class HomePage {
     console.log(this.searchForm.value);
     this.http.get('https://wikint.fr/js/services/getEvents.php')
     .subscribe((res) => {
-      alert(res.json());
+      console.log(res.json());
     }, (err) => {
       alert("Something went wrong !\n\nMake sure your device is connected to internet.");
     });
