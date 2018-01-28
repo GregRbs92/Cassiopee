@@ -18,10 +18,10 @@ export class MyApp {
       statusBar.styleDefault();
       splashScreen.hide();
 
-      translate.addLangs(["en", "ru", "ar"]);
-      translate.setDefaultLang('en');
+      this.translate.addLangs(["en", "ru", "ar"]);
+      this.translate.setDefaultLang('en');
       let browserLang = translate.getBrowserLang();
-      translate.use(browserLang.match(/en|ru|ar/) ? browserLang : 'en');
+      this.translate.use(browserLang.match(/en|ru|ar/) ? browserLang : 'en');
     });
   }
 }

@@ -14,17 +14,17 @@
   </section>
 
   <p id="catch-phrase">
-    Prenez rendez-vous en ligne chez un professionnel de santé
+    {{ 'HOME.CATCH_PHRASE' | translate }}
   </p>
 
   <form [formGroup]="searchForm">
-    <input type="text" placeholder="Spécialité" formControlName="speciality"/>
-    <input type="text" placeholder="Où? (Adresse, ville...)" formControlName="location"/>
+    <input type="text" placeholder="{{ 'HOME.SPECIALITY_FIELD' | translate}}" formControlName="speciality"/>
+    <input type="text" placeholder="{{ 'HOME.LOCATION_FIELD' | translate}}" formControlName="location"/>
     <select formControlName="language">
       <option value="en">English</option>
       <option value="ar">العربية</option>
       <option value="ru">русский</option>
     </select>
-    <button (click)="search()"><ion-icon name="search"></ion-icon> Search</button>
+    <button (click)="search()"><ion-icon name="search"></ion-icon> {{ 'HOME.BUTTON_SEARCH' | translate }}</button>
   </form>
 </ion-content>
