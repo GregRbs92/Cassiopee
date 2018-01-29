@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { Http, Headers } from '@angular/http';
 import { NavController } from 'ionic-angular';
-import {Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'page-home',
@@ -10,28 +7,31 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class HomePage {
 
-  searchForm: FormGroup;
-
-  constructor(public navCtrl: NavController, private formBuilder: FormBuilder, private http:Http, private translate: TranslateService) {
-    this.searchForm = this.formBuilder.group({
-      language: ['', Validators.required],
-      speciality: [''],
-      location: ['', Validators.required]
-    })
+  constructor(public navCtrl: NavController) {
   }
 
-  search() {
-    console.log(this.searchForm.value);
-    this.http.get('https://wikint.fr/js/services/getEvents.php')
-    .subscribe((res) => {
-      console.log(res.json());
-    }, (err) => {
-      alert("Something went wrong !\n\nMake sure your device is connected to internet.");
-    });
-  }
+  goTo(page:string) {
+    switch (page) {
+      case 'medical':
+        console.log("Going to medical page");
+        break;
 
-  changeLanguageTo(language:string) {
-    this.translate.use(language);
+      case 'accomodation':
+        console.log("Going to accomodation page");
+        break;
+
+      case 'translator':
+        console.log("Going to translator page");
+        break;
+
+      case 'services':
+        console.log("Going to services page");
+        break;
+
+      default:
+        alert("Error: This page does not exist...");
+        break;
+    }
   }
 
 }

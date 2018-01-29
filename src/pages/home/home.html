@@ -6,32 +6,62 @@
   </ion-navbar>
 </ion-header> -->
 
-<ion-content padding id="container">
+<ion-content id="container">
   <section id="header">
     <ion-icon name="menu"></ion-icon>
-    <h1>DoctoLib</h1>
+    <h1>Jasmine</h1>
     <ion-icon name="person"></ion-icon>
   </section>
 
-  <p id="catch-phrase">
-    {{ 'HOME.CATCH_PHRASE' | translate }}
-  </p>
-
-  <form [formGroup]="searchForm">
-    <input type="text" placeholder="{{ 'HOME.SPECIALITY_FIELD' | translate}}" formControlName="speciality"/>
-    <input type="text" placeholder="{{ 'HOME.LOCATION_FIELD' | translate}}" formControlName="location"/>
-    <select formControlName="language">
-      <option value="en">English</option>
-      <option value="ar">العربية</option>
-      <option value="ru">русский</option>
-    </select>
-    <button (click)="search()"><ion-icon name="search"></ion-icon> {{ 'HOME.BUTTON_SEARCH' | translate }}</button>
-  </form>
-
-  <h2>{{ 'HOME.CHOOSE_LANG' | translate }} :</h2>
-  <section id="flag-container">
-    <img src="../../assets/imgs/flags/en.png" (click)="changeLanguageTo('en')"/>
-    <img src="../../assets/imgs/flags/ru.png" (click)="changeLanguageTo('ru')"/>
-    <img src="../../assets/imgs/flags/ar.png" (click)="changeLanguageTo('ar')"/>
+  <section class="category" (click)="goTo('medical')">
+    <div class="img-container">
+      <img src="../../assets/imgs/homepage/medical.png" alt="medical-assistance-icon" class="icon">
+    </div>
+    <div class="text-container">
+      <h2>{{ 'HOME.MEDICAL_ASSISTANCE' | translate }}</h2>
+      <p>{{ 'HOME.DOCTOR' | translate }}</p>
+      <p>{{ 'HOME.NURSE' | translate }}</p>
+      <p>{{ 'HOME.DRUGSTORE' | translate }}</p>
+    </div>
   </section>
+
+  <section class="category" (click)="goTo('accomodation')">
+    <div class="img-container">
+      <img src="../../assets/imgs/homepage/accomodation.png" alt="accomodation-icon" class="icon">
+    </div>
+    <div class="text-container">
+      <h2>{{ 'HOME.ACCOMODATION' | translate }}</h2>
+      <p>{{ 'HOME.HOTEL' | translate }}</p>
+      <p>{{ 'HOME.MOTEL' | translate }}</p>
+      <p>{{ 'HOME.APARTMENT' | translate }}</p>
+    </div>
+  </section>
+
+  <section class="category" (click)="goTo('translator')">
+    <div class="img-container">
+      <img src="../../assets/imgs/homepage/translator.png" alt="translator-icon" class="icon">
+    </div>
+    <div class="text-container">
+      <h2>{{ 'HOME.TRANSLATOR' | translate }}</h2>
+      <p>{{ 'HOME.ENGLISH' | translate }}</p>
+      <p>{{ 'HOME.RUSSIAN' | translate }}</p>
+      <p>{{ 'HOME.ARABIC' | translate }}</p>
+    </div>
+  </section>
+
+  <section class="category" (click)="goTo('services')">
+    <div class="img-container">
+      <img src="../../assets/imgs/homepage/services.png" alt="medical-assistance-icon" class="icon">
+    </div>
+    <div class="text-container">
+      <h2>{{ 'HOME.SERVICES' | translate }}</h2>
+      <p>{{ 'HOME.TRANSPORT' | translate }}</p>
+      <p>{{ 'HOME.FOOD' | translate }}</p>
+      <p>{{ 'HOME.CLEANING' | translate }}</p>
+    </div>
+  </section>
+
+  <button class="show-more">
+    {{ 'HOME.SHOW_MORE' | translate }}
+  </button>
 </ion-content>

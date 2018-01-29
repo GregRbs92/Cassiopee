@@ -1,9 +1,21 @@
 {
   "HOME" : {
-    "CATCH_PHRASE": "Take an appointment with a professional doctor",
-    "SPECIALITY_FIELD": "Speciality",
-    "LOCATION_FIELD": "Location (Address, city ...)",
-    "BUTTON_SEARCH": "Search",
-    "CHOOSE_LANG": "Choose your language"
+    "MEDICAL_ASSISTANCE": "Medical Assistance",
+    "DOCTOR": "Doctor",
+    "NURSE": "Nurse",
+    "DRUGSTORE": "Drugstore",
+    "ACCOMODATION": "Accomodation",
+    "HOTEL": "Hotel",
+    "MOTEL": "Motel",
+    "APARTMENT": "Apartment",
+    "TRANSLATOR": "Translator",
+    "ENGLISH": "English",
+    "RUSSIAN": "Russian",
+    "ARABIC": "Arabic",
+    "SERVICES": "Services",
+    "TRANSPORT": "Transport",
+    "FOOD": "Food",
+    "CLEANING": "Cleaning",
+    "SHOW_MORE": "Show More"
   }
 }

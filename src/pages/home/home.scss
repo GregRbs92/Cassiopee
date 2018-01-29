@@ -1,70 +1,58 @@
 page-home {
-  #container{
-    background: -webkit-gradient(#0998df, #a6dbf5);
-    background: -o-linear-gradient(#0998df, #a6dbf5);
-    background: -moz-linear-gradient(#0998df, #a6dbf5);
-    background: linear-gradient(#0998df, #a6dbf5);
-
+  #container {
+    background-color: #fff;
     #header {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      background-color: color($colors, primary);
+      padding: 16px;
       color: #fff;
-
       h1 {
         margin: 0;
       }
-
       ion-icon {
-        font-size: 28px;
+        font-size: 30px;
       }
     }
-
-    #catch-phrase {
-      max-width: 200px;
-      text-align: justify;
-      color: #fff;
-      margin: 30px auto;
-    }
-
-    form {
-      max-width: 500px;
-      margin: 30px auto;
-
-      input, button, select {
-        width: 100%;
-        border: 0;
-        border-radius: 5px;
-        padding: 13px;
-        margin: 5px 0;
-        background-color: #fff;
-      }
-      button {
-        background-color: #fdc400;
-        color: #fff;
-        font-size: 1.3em;
-
-        ion-icon {
+    section.category {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid #aaa;
+      div.img-container {
+        width: 30%;
+        padding: 10px;
+        text-align: center;
+        img {
+          max-height: 95px;
           vertical-align: middle;
-          margin-right: 5px;
+          max-width: 100%;
+        }
+      }
+      div.text-container {
+        padding: 10px 15px;
+        h2 {
+          font-size: 1.8rem;
+          margin-top: 0;
+          margin-bottom: 3px;
+        }
+        p {
+          margin: 3px;
+          font-size: 1.2rem;
           font-weight: bold;
+          color: #666;
         }
       }
     }
-
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 2rem;
-      color: #fff;
-    }
-    #flag-container {
-      text-align: center;
-      img {
-        max-width: 30%;
-        max-height: 40px;
-        vertical-align: middle;
-        margin: 0 10px
-      }
+    button {
+      color: white;
+      background-color: #02735f;
+      font-weight: bold;
+      display: block;
+      width: 70%;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 30px auto;
     }
   }
 }
