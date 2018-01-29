@@ -1,0 +1,21 @@
+{
+  "HOME" : {
+    "MEDICAL_ASSISTANCE": "Medical Assistance",
+    "DOCTOR": "Doctor",
+    "NURSE": "Nurse",
+    "DRUGSTORE": "Drugstore",
+    "ACCOMODATION": "Accomodation",
+    "HOTEL": "Hotel",
+    "MOTEL": "Motel",
+    "APARTMENT": "Apartment",
+    "TRANSLATOR": "Translator",
+    "ENGLISH": "English",
+    "RUSSIAN": "Russian",
+    "ARABIC": "Arabic",
+    "SERVICES": "Services",
+    "TRANSPORT": "Transport",
+    "FOOD": "Food",
+    "CLEANING": "Cleaning",
+    "SHOW_MORE": "Show More"
+  }
+}
