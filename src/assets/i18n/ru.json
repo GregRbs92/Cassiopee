@@ -1,9 +1,26 @@
 {
   "HOME" : {
-    "CATCH_PHRASE": "Russe",
-    "SPECIALITY_FIELD": "Speciality",
-    "LOCATION_FIELD": "Location (Address, city ...)",
-    "BUTTON_SEARCH": "Search",
-    "CHOOSE_LANG": "Choose your language"
+    "CATCH_PHRASE": "Записаться на прием к врачу",
+    "SPECIALITY_FIELD": "специальность",
+    "LOCATION_FIELD": "место",
+    "BUTTON_SEARCH": "поиск",
+    "CHOOSE_LANG": "выберите язык",
+    "MEDICAL_ASSISTANCE": "медицинская помощь",
+    "DOCTOR": "врач",
+    "NURSE": "медсестра",
+    "DRUGSTORE": "аптека",
+    "ACCOMODATION": "жилье",
+    "HOTEL": "Гостиница",
+    "MOTEL": "мотель",
+    "APARTMENT": "квартира",
+    "TRANSLATOR": "интерпретировать",
+    "ENGLISH": "английский",
+    "RUSSIAN": "русский",
+    "ARABIC": "арабский",
+    "SERVICES": "услуги",
+    "TRANSPORT": "транспорт",
+    "FOOD": "питание",
+    "CLEANING": "уборка",
+    "SHOW_MORE": "показать больше"
   }
 }

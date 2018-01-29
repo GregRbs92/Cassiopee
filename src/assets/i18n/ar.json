@@ -4,6 +4,23 @@
     "SPECIALITY_FIELD": "تخصص",
     "LOCATION_FIELD": "موقعك",
     "BUTTON_SEARCH": "بحث",
-    "CHOOSE_LANG": "اختر لغتك"
+    "CHOOSE_LANG": "اختر لغتك",
+    "MEDICAL_ASSISTANCE": "المساعدة الطبية",
+    "DOCTOR": "طبيب",
+    "NURSE": "ممرضة",
+    "DRUGSTORE": "صيدلية",
+    "ACCOMODATION": "الإقامة",
+    "HOTEL": "فندق",
+    "MOTEL": "فندق صغير",
+    "APARTMENT": "شقة",
+    "TRANSLATOR": "مترجم",
+    "ENGLISH": "الإنجليزية",
+    "RUSSIAN": "الروسية",
+    "ARABIC": "العربية",
+    "SERVICES": "الخدمات",
+    "TRANSPORT": "نقل",
+    "FOOD": "طعام",
+    "CLEANING": "منزلي",
+    "SHOW_MORE": "أظهر المزيد"
   }
 }

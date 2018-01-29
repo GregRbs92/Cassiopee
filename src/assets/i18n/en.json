@@ -1,5 +1,10 @@
 {
   "HOME" : {
+    "CATCH_PHRASE": "Take an appointment with a doctor",
+    "SPECIALITY_FIELD": "Speciality",
+    "LOCATION_FIELD": "Location",
+    "BUTTON_SEARCH": "Search",
+    "CHOOSE_LANG": "Choose language",
     "MEDICAL_ASSISTANCE": "Medical Assistance",
     "DOCTOR": "Doctor",
     "NURSE": "Nurse",
