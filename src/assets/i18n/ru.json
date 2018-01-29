@@ -1,0 +1,9 @@
+{
+  "HOME" : {
+    "CATCH_PHRASE": "Russe",
+    "SPECIALITY_FIELD": "Speciality",
+    "LOCATION_FIELD": "Location (Address, city ...)",
+    "BUTTON_SEARCH": "Search",
+    "CHOOSE_LANG": "Choose your language"
+  }
+}

@@ -3,6 +3,7 @@
     "CATCH_PHRASE": "Take an appointment with a professional doctor",
     "SPECIALITY_FIELD": "Speciality",
     "LOCATION_FIELD": "Location (Address, city ...)",
-    "BUTTON_SEARCH": "Search"
+    "BUTTON_SEARCH": "Search",
+    "CHOOSE_LANG": "Choose your language"
   }
 }

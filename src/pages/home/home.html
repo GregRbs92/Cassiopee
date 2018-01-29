@@ -27,4 +27,11 @@
     </select>
     <button (click)="search()"><ion-icon name="search"></ion-icon> {{ 'HOME.BUTTON_SEARCH' | translate }}</button>
   </form>
+
+  <h2>{{ 'HOME.CHOOSE_LANG' | translate }} :</h2>
+  <section id="flag-container">
+    <img src="../../assets/imgs/flags/en.png" (click)="changeLanguageTo('en')"/>
+    <img src="../../assets/imgs/flags/ru.png" (click)="changeLanguageTo('ru')"/>
+    <img src="../../assets/imgs/flags/ar.png" (click)="changeLanguageTo('ar')"/>
+  </section>
 </ion-content>
