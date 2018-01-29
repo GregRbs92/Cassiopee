@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { TranslatePage } from '../translate/translate';
 
 @Component({
   selector: 'page-home',
@@ -21,7 +22,7 @@ export class HomePage {
         break;
 
       case 'translator':
-        console.log("Going to translator page");
+        this.navCtrl.push(TranslatePage);
         break;
 
       case 'services':

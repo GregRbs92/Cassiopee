@@ -11,6 +11,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TranslatePage } from '../pages/translate/translate';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "../assets/i18n/", ".json");
@@ -19,7 +20,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TranslatePage
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    TranslatePage
   ],
   providers: [
     StatusBar,
