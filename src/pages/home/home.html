@@ -8,9 +8,13 @@
 
 <ion-content id="container">
   <section id="header">
-    <ion-icon name="menu"></ion-icon>
+    <button ion-button icon-only menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <h1>Jasmine</h1>
-    <ion-icon name="person"></ion-icon>
+    <button ion-button icon-only>
+      <ion-icon name="person"></ion-icon>
+    </button>
   </section>
 
   <section class="category" (click)="goTo('medical')">
