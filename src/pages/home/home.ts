@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslatePage } from '../translate/translate';
-import { SearchPage } from '../search/search';
-
 
 @Component({
   selector: 'page-home',
@@ -38,7 +36,7 @@ export class HomePage {
   }
 
   seeMore() {
-    this.navCtrl.push(SearchPage);
+    this.navCtrl.parent.select(1);
   }
 
 }

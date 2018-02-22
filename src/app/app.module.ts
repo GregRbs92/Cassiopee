@@ -14,6 +14,8 @@ import { HomePage } from '../pages/home/home';
 import { TranslatePage } from '../pages/translate/translate';
 import { ComponentsModule } from '../components/components.module';
 import { SearchPage } from '../pages/search/search';
+import { TabsPage } from '../pages/tabs/tabs';
+import { UserPage } from '../pages/user/user';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "../assets/i18n/", ".json");
@@ -24,7 +26,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MyApp,
     HomePage,
     TranslatePage,
-    SearchPage
+    SearchPage,
+    TabsPage,
+    UserPage
   ],
   imports: [
     BrowserModule,
@@ -45,7 +49,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     MyApp,
     HomePage,
     TranslatePage,
-    SearchPage
+    SearchPage,
+    TabsPage,
+    UserPage
   ],
   providers: [
     StatusBar,

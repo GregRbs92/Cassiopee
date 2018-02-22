@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { TranslatePage } from '../translate/translate';
 
 
 @Component({
@@ -11,8 +12,8 @@ export class SearchPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  back() {
-    this.navCtrl.pop();
+  goToInterprete() {
+    this.navCtrl.push(TranslatePage);
   }
 
 }
