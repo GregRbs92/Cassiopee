@@ -1,0 +1,33 @@
+.choice-box {
+  display: inline-block;
+  padding: 5px;
+  width: 50%;
+  &.full {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+  & > div {
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba($color: #000000, $alpha: 0.3);
+    }
+    p {
+      position: relative;
+      z-index: 1;
+      margin: 0;
+      text-align: center;
+      line-height: 150px;
+      color: #fff;
+      font-size: 17px;
+    }
+  }
+}

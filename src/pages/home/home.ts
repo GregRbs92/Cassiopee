@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslatePage } from '../translate/translate';
+import { SearchPage } from '../search/search';
+
 
 @Component({
   selector: 'page-home',
@@ -18,7 +20,7 @@ export class HomePage {
         break;
 
       case 'accomodation':
-        console.log("Going to accomodation page");
+        console.log("Accomodation");
         break;
 
       case 'translator':
@@ -33,6 +35,10 @@ export class HomePage {
         alert("Error: This page does not exist...");
         break;
     }
+  }
+
+  seeMore() {
+    this.navCtrl.push(SearchPage);
   }
 
 }
