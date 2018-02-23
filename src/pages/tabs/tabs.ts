@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../home/home';
 import { SearchPage } from '../search/search';
-import { TranslatePage } from '../translate/translate';
 import { UserPage } from '../user/user';
 
 @Component({
@@ -17,6 +16,5 @@ export class TabsPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
-
 
 }

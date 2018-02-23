@@ -1,0 +1,19 @@
+<ion-content>
+  <section class="sample-app-content">
+    <h1>Model-based Form Example:</h1>
+    <form [formGroup]="form" (ngSubmit)="login()">
+      <p>{{ error }}</p>
+      <p>
+        <label>Email:</label>
+        <input type="text" formControlName="email">
+      </p>
+      <p>
+        <label>Password:</label>
+        <input type="password" formControlName="password">
+      </p>
+      <p>
+        <button type="submit" [disabled]="!form.valid">Submit</button>
+      </p>
+    </form>
+  </section>
+</ion-content>

@@ -8,9 +8,14 @@
     margin-bottom: 10px;
   }
   & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-position: center center;
     background-size: cover;
     position: relative;
+    height: 150px;
     &::after {
       content: '';
       position: absolute;
@@ -25,7 +30,6 @@
       z-index: 1;
       margin: 0;
       text-align: center;
-      line-height: 150px;
       color: #fff;
       font-size: 17px;
     }
