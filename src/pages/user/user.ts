@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { Storage } from '@ionic/storage';
+import { LoginPage } from '../login/login';
 
 /**
  * Generated class for the UserPage page.
@@ -14,11 +17,29 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class UserPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  isLoggedIn:boolean;
+  username:string;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthServiceProvider, private storage:Storage) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad UserPage');
+  ionViewWillEnter() {
+    this.auth.isAuthenticated().then(val => {
+      if (val) {
+        this.isLoggedIn = true;
+        this.storage.get('username').then(res => this.username = res);
+      }
+      this.isLoggedIn = val;
+    });
+  }
+
+  goToLoginPage() {
+    this.navCtrl.push(LoginPage);
+  }
+
+  logout() {
+    this.auth.logout();
+    this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(0));
   }
 
 }

@@ -1,12 +1,7 @@
 <ion-content id="container">
   <section id="header">
-    <button ion-button icon-only>
-      <ion-icon name="menu"></ion-icon>
-    </button>
     <h1>Jasmine</h1>
-    <button ion-button icon-only>
-      <ion-icon name="person"></ion-icon>
-    </button>
+    <button (click)="goToResearch()">Trouver un service</button>
   </section>
 
   <section class="category" (click)="goTo('medical')">
@@ -57,7 +52,7 @@
     </div>
   </section>
 
-  <button class="show-more" (click)="seeMore()">
+  <button class="show-more">
     {{ 'HOME.SHOW_MORE' | translate }}
   </button>
   

@@ -35,7 +35,7 @@ export class HomePage {
     }
   }
 
-  seeMore() {
+  goToResearch() {
     this.navCtrl.parent.select(1);
   }
 

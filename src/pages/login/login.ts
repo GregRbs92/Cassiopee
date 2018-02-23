@@ -3,6 +3,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { TabsPage } from '../tabs/tabs';
+import 'rxjs/add/operator/catch';
 
 /**
  * Generated class for the LoginPage page.
@@ -41,11 +42,14 @@ export class LoginPage implements OnInit {
     this.authService.login(this.form.value.email, this.form.value.password)
       .subscribe(result => {
         if (result) {
-          this.navCtrl.push(TabsPage);
+          this.navCtrl.popToRoot();
         } else {
           this.error = 'Username or password is incorrect';
           this.loading = false;
         }
+      }, err => {
+        this.error = err.error.message;
+        console.log(err);
       });
   }
 

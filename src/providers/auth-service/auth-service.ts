@@ -36,7 +36,7 @@ export class AuthServiceProvider {
       });
   }
 
-  isAuthenticated():Promise<Boolean> {
+  isAuthenticated():Promise<boolean> {
     return this.storage.get('access_token').then((val) => {
       if (!val) {
         return false;
@@ -46,6 +46,11 @@ export class AuthServiceProvider {
         return !expired;
       }
     });
+  }
+
+  logout() {
+    this.storage.remove('access_token');
+    this.storage.remove('username');
   }
 }
 

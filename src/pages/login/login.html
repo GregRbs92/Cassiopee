@@ -1,19 +1,13 @@
 <ion-content>
-  <section class="sample-app-content">
-    <h1>Model-based Form Example:</h1>
+  <section class="container">
     <form [formGroup]="form" (ngSubmit)="login()">
-      <p>{{ error }}</p>
-      <p>
-        <label>Email:</label>
-        <input type="text" formControlName="email">
-      </p>
-      <p>
-        <label>Password:</label>
-        <input type="password" formControlName="password">
-      </p>
-      <p>
-        <button type="submit" [disabled]="!form.valid">Submit</button>
-      </p>
+      <h1>Log in</h1>
+      <p class="error">{{ error }}</p>
+      <label>Email:</label>
+      <input type="text" formControlName="email" spellcheck="false">
+      <label>Password:</label>
+      <input type="password" formControlName="password">
+      <button type="submit">Submit</button>
     </form>
   </section>
 </ion-content>
