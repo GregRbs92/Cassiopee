@@ -1,13 +1,16 @@
 <ion-content padding>
 
-  <section *ngIf="isLoggedIn">
+  <section *ngIf="isLoggedIn" id="connected">
     <h1>Salut {{ username }}</h1>
     <button (click)="logout()">Déconnexion</button>
   </section>
 
-  <section *ngIf="!isLoggedIn">
+  <section *ngIf="!isLoggedIn" id="not-connected">
+    <ion-icon name="pulse"></ion-icon>
     <h1>Vous n'êtes pas connecté...</h1>
     <button (click)="goToLoginPage()">Se connecter !</button>
+    <p>ou</p>
+    <button (click)="goToLoginPage()">S'inscrire !</button>
   </section>
 
 </ion-content>

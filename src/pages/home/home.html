@@ -4,56 +4,22 @@
     <button (click)="goToResearch()">Trouver un service</button>
   </section>
 
-  <section class="category" (click)="goTo('medical')">
-    <div class="img-container">
-      <img src="../../assets/imgs/homepage/medical.png" alt="medical-assistance-icon" class="icon">
-    </div>
-    <div class="text-container">
-      <h2>{{ 'HOME.MEDICAL_ASSISTANCE' | translate }}</h2>
-      <p>{{ 'HOME.DOCTOR' | translate }}</p>
-      <p>{{ 'HOME.NURSE' | translate }}</p>
-      <p>{{ 'HOME.DRUGSTORE' | translate }}</p>
-    </div>
+  <section padding id="appointments">
+    <h2>Vos réservations</h2>
+    <p *ngIf="!(appointments?.length > 0)"><em>Aucune réservation pour le moment.</em></p>
   </section>
 
-  <section class="category" (click)="goTo('accomodation')">
-    <div class="img-container">
-      <img src="../../assets/imgs/homepage/accomodation.png" alt="accomodation-icon" class="icon">
-    </div>
-    <div class="text-container">
-      <h2>{{ 'HOME.ACCOMODATION' | translate }}</h2>
-      <p>{{ 'HOME.HOTEL' | translate }}</p>
-      <p>{{ 'HOME.MOTEL' | translate }}</p>
-      <p>{{ 'HOME.APARTMENT' | translate }}</p>
-    </div>
-  </section>
+  <hr />
 
-  <section class="category" (click)="goTo('translator')">
-    <div class="img-container">
-      <img src="../../assets/imgs/homepage/translator.png" alt="translator-icon" class="icon">
-    </div>
-    <div class="text-container">
-      <h2>{{ 'HOME.TRANSLATOR' | translate }}</h2>
-      <p>{{ 'HOME.ENGLISH' | translate }}</p>
-      <p>{{ 'HOME.RUSSIAN' | translate }}</p>
-      <p>{{ 'HOME.ARABIC' | translate }}</p>
-    </div>
-  </section>
+  <section padding id="contact">
+    <h2>Nous contacter</h2>
 
-  <section class="category" (click)="goTo('services')">
-    <div class="img-container">
-      <img src="../../assets/imgs/homepage/services.png" alt="medical-assistance-icon" class="icon">
-    </div>
-    <div class="text-container">
-      <h2>{{ 'HOME.SERVICES' | translate }}</h2>
-      <p>{{ 'HOME.TRANSPORT' | translate }}</p>
-      <p>{{ 'HOME.FOOD' | translate }}</p>
-      <p>{{ 'HOME.CLEANING' | translate }}</p>
-    </div>
-  </section>
+    <p><ion-icon name="pin"></ion-icon> 9 rue Charles Fourier, 91000 Évry, France</p>
+    <p><ion-icon name="call"></ion-icon> +336 06 06 06 06</p>
 
-  <button class="show-more">
-    {{ 'HOME.SHOW_MORE' | translate }}
-  </button>
-  
+    <form (submit)="onSubmit(message.value)">
+      <textarea name="message" placeholder="Votre message..." #message></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+  </section>
 </ion-content>
