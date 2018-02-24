@@ -55,6 +55,11 @@ page-home {
       }
       form {
         margin-top: 10px;
+        .error {
+          color: #ff0000;
+          margin-bottom: 0;
+          margin-top: 20px;
+        }
         textarea {
           width: 100%;
           height: 150px;
@@ -69,6 +74,9 @@ page-home {
           color: #fff;
           background-color: color($colors, primary);
           border: 0;
+          ion-spinner * {
+            stroke: #fff;
+          }
         }
       }
     }

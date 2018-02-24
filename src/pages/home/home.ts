@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { TranslatePage } from '../translate/translate';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 
 @Component({
   selector: 'page-home',
@@ -9,8 +10,10 @@ import { TranslatePage } from '../translate/translate';
 export class HomePage {
 
   appointments = [];
+  sendingError:string;
+  sending:boolean = false;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private auth:AuthServiceProvider) {
   }
 
   goToResearch() {
@@ -18,7 +21,13 @@ export class HomePage {
   }
 
   onSubmit(message) {
-    console.log(message);
+    this.sending = true;
+    this.auth.isAuthenticated().then(val => {
+      if(!val) {
+        this.sendingError = "Vous devez être connecté pour envoyer un message";
+        this.sending = false
+      }
+    });
   }
 
 }

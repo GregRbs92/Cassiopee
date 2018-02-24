@@ -18,8 +18,10 @@
     <p><ion-icon name="call"></ion-icon> +336 06 06 06 06</p>
 
     <form (submit)="onSubmit(message.value)">
+      <p class="error">{{ sendingError }}</p>
       <textarea name="message" placeholder="Votre message..." #message></textarea>
-      <button type="submit">Envoyer</button>
+      <button type="submit" *ngIf="!sending">Envoyer</button>
+      <button type="button" *ngIf="sending"><ion-spinner></ion-spinner></button>
     </form>
   </section>
 </ion-content>
