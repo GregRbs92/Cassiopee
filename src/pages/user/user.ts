@@ -19,6 +19,7 @@ export class UserPage {
 
   isLoggedIn:boolean;
   username:string;
+  email:string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthServiceProvider, private storage:Storage) {
   }
@@ -27,7 +28,10 @@ export class UserPage {
     this.auth.isAuthenticated().then(val => {
       if (val) {
         this.isLoggedIn = true;
-        this.storage.get('username').then(res => this.username = res);
+        this.storage.get('user').then(res => {
+          this.username = res.username;
+          this.email = res.email;
+        });
       }
       this.isLoggedIn = val;
     });

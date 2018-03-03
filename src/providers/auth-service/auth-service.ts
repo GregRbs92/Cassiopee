@@ -20,11 +20,13 @@ export class AuthServiceProvider {
         let token = response.token;
         if (token) {
           // set token property
-          var username = JSON.parse(atob(token.split('.')[1])).username;
+          let username = JSON.parse(atob(token.split('.')[1])).username;
+          let email = JSON.parse(atob(token.split('.')[1])).email;
+          let user = {'username': username, 'email': email};
           this.token = token;
           // store email and jwt token in local storage to keep user logged in between page refreshes
           this.storage.set('access_token', token);
-          this.storage.set('username', username);
+          this.storage.set('user', user);
           this.loggedIn = true;
 
           // return true to indicate successful login
@@ -41,8 +43,8 @@ export class AuthServiceProvider {
       if (!val) {
         return false;
       } else {
-        var exp = JSON.parse(atob(val.split('.')[1])).exp;
-        var expired = Date.now() / 1000 < exp ? false : true;
+        let exp = JSON.parse(atob(val.split('.')[1])).exp;
+        let expired = Date.now() / 1000 < exp ? false : true;
         return !expired;
       }
     });

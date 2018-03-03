@@ -1,26 +1,15 @@
 {
   "HOME" : {
-    "CATCH_PHRASE": "Prendre rendez-vous avec un médecin",
-    "SPECIALITY_FIELD": "Spécialité",
-    "LOCATION_FIELD": "Lieu",
-    "BUTTON_SEARCH": "Rechercher",
-    "CHOOSE_LANG": "Choisir une langue",
-    "MEDICAL_ASSISTANCE": "Assistance médicale",
-    "DOCTOR": "Médecin",
-    "NURSE": "Infirmière",
-    "DRUGSTORE": "Pharmacie",
-    "ACCOMODATION": "Hébergement",
-    "HOTEL": "Hôtel",
-    "MOTEL": "Motel",
-    "APARTMENT": "Appartement",
-    "TRANSLATOR": "Interprète",
-    "ENGLISH": "Anglais",
-    "RUSSIAN": "Russe",
-    "ARABIC": "Arabe",
-    "SERVICES": "Services",
-    "TRANSPORT": "Transport",
-    "FOOD": "Restauration",
-    "CLEANING": "Ménage",
-    "SHOW_MORE": "Voir plus"
+    "BUTTON_HEADER": "Trouver un service",
+    "APPOINTMENTS_TITLE": "Vos réservations",
+    "NO_APPOINTMENTS": "Aucune réservation pour le moment.",
+    "CONTACT_US": "Nous contacter",
+    "YOUR_MESSAGE": "Votre message...",
+    "SEND": "Envoyer"
+  },
+  "SHOW_DOCTOR" : {
+    "SPECIALITY": "Spécialité",
+    "NO_SPECIALITY": "Veuillez renseigner une spécialité.",
+    "NO_LOCATION": "Veuillez renseigner un endroit."
   }
 }

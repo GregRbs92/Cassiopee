@@ -20,9 +20,13 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
+import { ShowDoctorsPage } from '../pages/show-doctors/show-doctors';
+import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
+import { Geolocation } from '@ionic-native/geolocation';
+import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient, "../assets/i18n/", ".json");
+  return new TranslateHttpLoader(httpClient, "/assets/i18n/", ".json");
 }
 
 @NgModule({
@@ -33,7 +37,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     SearchPage,
     TabsPage,
     UserPage,
-    LoginPage
+    LoginPage,
+    ShowDoctorsPage
   ],
   imports: [
     BrowserModule,
@@ -59,13 +64,17 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     SearchPage,
     TabsPage,
     UserPage,
-    LoginPage
+    LoginPage,
+    ShowDoctorsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthServiceProvider
+    AuthServiceProvider,
+    DoctorDataProvider,
+    Geolocation,
+    NativeGeocoder
   ]
 })
 export class AppModule {}

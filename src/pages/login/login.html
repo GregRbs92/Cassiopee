@@ -1,6 +1,6 @@
 <ion-content>
   <section class="container">
-    <form [formGroup]="form" (ngSubmit)="login()">
+    <form [formGroup]="form" (ngSubmit)="login()" *ngIf="!loading">
       <h1>Log in</h1>
       <p class="error">{{ error }}</p>
       <label>Email:</label>
@@ -8,6 +8,9 @@
       <label>Password:</label>
       <input type="password" formControlName="password">
       <button type="submit">Submit</button>
+    </form>
+    <form *ngIf="loading">
+      <ion-spinner></ion-spinner>
     </form>
   </section>
 </ion-content>
