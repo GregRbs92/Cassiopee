@@ -20,14 +20,23 @@
 
   <hr>
 
-  <section id="doctors-list">
-    <p class="loader" *ngIf="loading"><ion-spinner></ion-spinner></p>
-    <p *ngIf="doctors && doctors.length == 0"><em>Aucun docteur ne correspond à votre recherche.</em></p>
+  <p class="loader" *ngIf="loading"><ion-spinner></ion-spinner></p>
 
-    <div class="doctor" *ngFor="let d of doctors">
-      <p>{{ d.nom | uppercase }} {{ d.prenom }}</p>
-      <p>{{ d.distance }}km</p>
-      <p>{{ d.adresse }}</p>
+  <p *ngIf="doctors && doctors.length == 0"><em>Aucun docteur ne correspond à votre recherche.</em></p>
+
+  <section id="doctors-list">
+    <div class="doctor" *ngFor="let d of doctors" (click)="showDoctor(d.id)">
+      <div class="doctor-photo">
+        <div *ngIf="d.photo && d.photo != ''" class="photo-container"></div>
+        <ion-icon *ngIf="!d.photo || d.photo == ''" name="contact"></ion-icon>
+      </div>
+      <div class="doctor-infos">
+        <p class="name">{{ d.nom | uppercase }} {{ d.prenom }}</p>
+        <p>{{ d.adresse }}</p>
+      </div>
+      <div class="doctor-distance">
+        <p>{{ d.distance }}km</p>
+      </div>
     </div>
   </section>
 </ion-content>

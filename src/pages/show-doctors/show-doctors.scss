@@ -6,6 +6,7 @@ page-show-doctors {
       select {
         width: 100%;
         font-size: 18px;
+        background-color: #fff;
         border: 1px solid #555;
         padding: 6px 2px;
         border-radius: 5px 5px 0 0;
@@ -13,6 +14,7 @@ page-show-doctors {
       input {
         width: 100%;
         font-size: 18px;
+        background-color: #fff;
         border: 1px solid #555;
         padding: 6px;
         padding-right: 30px;
@@ -32,22 +34,51 @@ page-show-doctors {
       margin-bottom: 10px;
       ion-icon {
         font-size: 2em;
-        margin-right: 5px;
+        margin-right: 8px;
       }
       span {
         font-size: 1.2em;
       }
     }
   }
-
-  hr, .content-ios hr {
+  hr,
+  .content-ios hr {
     margin: 30px auto;
     background-color: rgba(0, 0, 0, 0.3);
   }
-
+  .loader {
+    text-align: center;
+  }
   #doctors-list {
-    .loader {
-      text-align: center;
+    box-shadow: 0 0 5px #aaa;
+    .doctor {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      border-bottom: .5px solid #aaa;
+      .doctor-photo {
+        flex: 1;
+        text-align: center;
+        ion-icon {
+          font-size: 3em;
+        }
+      }
+      .doctor-infos {
+        flex: 3;
+        padding: 0 10px;
+        .name {
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+      }
+      .doctor-distance {
+        flex: 1;
+        p {
+          font-size: 1.4em;
+          margin: 0;
+          text-align: center;
+        }
+      }
     }
   }
 }

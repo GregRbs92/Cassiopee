@@ -26,7 +26,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
-  return new TranslateHttpLoader(httpClient, "/assets/i18n/", ".json");
+  return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
 }
 
 @NgModule({

@@ -17,15 +17,15 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'page-show-doctors',
   templateUrl: 'show-doctors.html',
 })
-export class ShowDoctorsPage implements OnInit{
+export class ShowDoctorsPage implements OnInit {
 
   specialities: any[];
   location: string;
   lat: number;
   long: number;
-  loading:boolean;
-  error:string;
-  doctors:Array<Doctor>;
+  loading: boolean;
+  error: string;
+  doctors: Array<Doctor>;
 
   ngOnInit() {
     this.doctorData.getSpecialities().subscribe((res) => {
@@ -35,8 +35,8 @@ export class ShowDoctorsPage implements OnInit{
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    public platform:Platform,
-    private translate:TranslateService,
+    public platform: Platform,
+    private translate: TranslateService,
     public doctorData: DoctorDataProvider,
     public geolocation: Geolocation,
     public geocoder: NativeGeocoder) {
@@ -58,8 +58,7 @@ export class ShowDoctorsPage implements OnInit{
     }
     this.loading = true;
     this.platform.ready().then(data => {
-      alert(location);
-      this.geocoder.forwardGeocode(location).then((res:NativeGeocoderForwardResult) => {
+      this.geocoder.forwardGeocode(location).then((res: NativeGeocoderForwardResult) => {
         this.lat = parseFloat(res[0].latitude);
         this.long = parseFloat(res[0].longitude);
         this.doctorData.searchDoctors(speciality, this.lat, this.long).subscribe(doctors => {
@@ -67,7 +66,10 @@ export class ShowDoctorsPage implements OnInit{
           this.doctors = doctors;
         });
       })
-      .catch(err => alert(err));
+        .catch(err => {
+          this.loading = false;
+          alert(err);
+        });
     });
   }
 
@@ -81,15 +83,23 @@ export class ShowDoctorsPage implements OnInit{
     }
     this.loading = true;
     this.platform.ready().then(data => {
-      this.geolocation.getCurrentPosition({timeout: 10000}).then(pos => {
+      this.geolocation.getCurrentPosition({ timeout: 10000 }).then(pos => {
         this.lat = pos.coords.latitude;
         this.long = pos.coords.longitude;
         this.doctorData.searchDoctors(speciality, this.lat, this.long).subscribe(doctors => {
           this.loading = false;
           this.doctors = doctors;
         });
+      })
+      .catch(err => {
+        this.loading = false;
+        alert("Cannot get your location: " + err);
       });
     });
+  }
+
+  showDoctor(id_doctor) {
+    console.log(id_doctor);
   }
 
 }

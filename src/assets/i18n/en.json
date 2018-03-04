@@ -1,26 +1,15 @@
 {
   "HOME" : {
-    "CATCH_PHRASE": "Take an appointment with a doctor",
-    "SPECIALITY_FIELD": "Speciality",
-    "LOCATION_FIELD": "Location",
-    "BUTTON_SEARCH": "Search",
-    "CHOOSE_LANG": "Choose language",
-    "MEDICAL_ASSISTANCE": "Medical Assistance",
-    "DOCTOR": "Doctor",
-    "NURSE": "Nurse",
-    "DRUGSTORE": "Drugstore",
-    "ACCOMODATION": "Accomodation",
-    "HOTEL": "Hotel",
-    "MOTEL": "Motel",
-    "APARTMENT": "Apartment",
-    "TRANSLATOR": "Translator",
-    "ENGLISH": "English",
-    "RUSSIAN": "Russian",
-    "ARABIC": "Arabic",
-    "SERVICES": "Services",
-    "TRANSPORT": "Transport",
-    "FOOD": "Food",
-    "CLEANING": "Cleaning",
-    "SHOW_MORE": "Show More"
+    "BUTTON_HEADER": "Find a service",
+    "APPOINTMENTS_TITLE": "Your appointments",
+    "NO_APPOINTMENTS": "No appointments for the moment.",
+    "CONTACT_US": "Contact us",
+    "YOUR_MESSAGE": "Your message...",
+    "SEND": "Send"
+  },
+  "SHOW_DOCTOR" : {
+    "SPECIALITY": "Speciality",
+    "NO_SPECIALITY": "You have not selected any speciality.",
+    "NO_LOCATION": "You have not chosen the location."
   }
 }
