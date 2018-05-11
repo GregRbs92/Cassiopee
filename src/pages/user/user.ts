@@ -17,9 +17,8 @@ import { LoginPage } from '../login/login';
 })
 export class UserPage {
 
-  isLoggedIn:boolean;
-  username:string;
-  email:string;
+  isLoggedIn:boolean = false;
+  user:any = {'username': 'Username', 'email': 'Email'};
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthServiceProvider, private storage:Storage) {
   }
@@ -29,11 +28,18 @@ export class UserPage {
       if (val) {
         this.isLoggedIn = true;
         this.storage.get('user').then(res => {
-          this.username = res.username;
-          this.email = res.email;
+          if (res) {
+            this.user = res;
+          }
+          else {
+            this.auth.getUser().then(res => {
+              res.subscribe(user => {
+                this.user = user;
+              });
+            });
+          }
         });
       }
-      this.isLoggedIn = val;
     });
   }
 
@@ -44,6 +50,7 @@ export class UserPage {
   logout() {
     this.auth.logout();
     this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(0));
+    this.isLoggedIn = false;
   }
 
 }

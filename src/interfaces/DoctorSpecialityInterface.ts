@@ -1,7 +1,7 @@
 export interface DoctorSpeciality {
   id:number;
-  frName:string;
-  enName:string;
-  arName:string;
-  ruName:string;
+  fr:string;
+  en:string;
+  ar:string;
+  ru:string;
 }

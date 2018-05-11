@@ -55,6 +55,7 @@ page-show-doctors {
       display: flex;
       flex-direction: row;
       align-items: center;
+      padding: 0 4px;
       border-bottom: .5px solid #aaa;
       .doctor-photo {
         flex: 1;

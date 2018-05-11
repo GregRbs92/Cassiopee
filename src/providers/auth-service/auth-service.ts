@@ -2,35 +2,42 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthServiceProvider {
 
   loggedIn: boolean = false;
-  token: string;
 
   constructor(public http: HttpClient, private storage: Storage) {
   }
 
   login(email: string, password: string) {
 
-    return this.http.post('https://apocalypse2017.com/jasmine/api/restricted/login_check', { '_email': email, '_password': password })
+    return this.http.post('https://itmp-api.herokuapp.com/api/clients/login', { 'email': email, 'password': password })
       .map((response: any) => {
-        // login successful if there's a jwt token in the response
-        let token = response.token;
+        console.log(response);
+        // login successful if there's a token in the response
+        let token = response.id;
         if (token) {
           // set token property
-          let username = JSON.parse(atob(token.split('.')[1])).username;
-          let email = JSON.parse(atob(token.split('.')[1])).email;
-          let user = {'username': username, 'email': email};
-          this.token = token;
+          let ttl = Date.now() + response.ttl * 1000;
+          let userId = response.userId;
           // store email and jwt token in local storage to keep user logged in between page refreshes
-          this.storage.set('access_token', token);
-          this.storage.set('user', user);
+          this.storage.set('access_token', {'token': token, 'ttl': ttl, 'userId': userId});
           this.loggedIn = true;
+
+          // store the user in storage
+          this.getUser().then(res => {
+            res.subscribe(user => {
+              console.warn(user);
+              this.storage.set('user', user);
+            });
+          });
 
           // return true to indicate successful login
           return true;
+
         } else {
           // return false to indicate failed login
           return false;
@@ -40,19 +47,24 @@ export class AuthServiceProvider {
 
   isAuthenticated():Promise<boolean> {
     return this.storage.get('access_token').then((val) => {
-      if (!val) {
+      if (!val || !val.ttl) {
         return false;
       } else {
-        let exp = JSON.parse(atob(val.split('.')[1])).exp;
-        let expired = Date.now() / 1000 < exp ? false : true;
-        return !expired;
+        return Date.now() < val.ttl;
+      }
+    });
+  }
+
+  getUser(): Promise<Observable<any>> {
+    return this.storage.get('access_token').then(val => {
+      if (val) {
+        return this.http.get(`https://itmp-api.herokuapp.com/api/clients/${val.userId}?access_token=${val.token}`);
       }
     });
   }
 
   logout() {
     this.storage.remove('access_token');
-    this.storage.remove('username');
   }
 }
 
