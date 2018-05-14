@@ -1,11 +1,16 @@
 {
   "HOME" : {
-    "BUTTON_HEADER": "Find a service",
-    "APPOINTMENTS_TITLE": "Your appointments",
-    "NO_APPOINTMENTS": "No appointments for the moment.",
-    "CONTACT_US": "Contact us",
-    "YOUR_MESSAGE": "Your message...",
-    "SEND": "Send"
+    "HEADER": {
+      "CATCH_PHRASE": "Comment pouvons-nous vous aier AUJOURD'HUI?"
+    },
+    "BUBBLES": {
+      "DEPARTMENT": "Département",
+      "APPOINTMENTS": "Rendez-vous",
+      "DRUGS": "Médicaments",
+      "RESULT_LAB": "Résultat Lab",
+      "PILLS": "Rappel de pilules",
+      "MY_PLAN": "Mon plan"
+    }
   },
   "SHOW_DOCTOR" : {
     "SPECIALITY": "Speciality",

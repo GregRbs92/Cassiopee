@@ -1,0 +1,15 @@
+<ion-content>
+  <header>
+    <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+    <span>{{ 'DEPARTMENTS.TITLE' | translate }}</span>
+  </header>
+  <div id="search-bar">
+    <ion-icon name="search"></ion-icon>
+    <input type="text" placeholder="{{ 'DEPARTMENTS.INPUT_PLACEHOLDER' | translate }}" (input)="filter($event)">
+  </div>
+  <div id="departments">
+    <div class="department" *ngFor="let d of departments" style="background-image: url('../../assets/imgs/homepage/paris.jpg')">
+      <label>{{ d[1] }}</label>
+    </div>
+  </div>
+</ion-content>

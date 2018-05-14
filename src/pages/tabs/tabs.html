@@ -1,5 +1,6 @@
 <ion-tabs>
-  <ion-tab [root]="home" tabIcon="home"></ion-tab>
-  <ion-tab [root]="search" tabIcon="search"></ion-tab>
-  <ion-tab [root]="user" tabIcon="person"></ion-tab>
+  <ion-tab [root]="home" tabIcon="home" tabTitle="{{ 'TABS.HOME' | translate }}"></ion-tab>
+  <ion-tab [root]="home" tabIcon="custom-sante" tabTitle="{{ 'TABS.HEALTH' | translate }}"></ion-tab>
+  <ion-tab [root]="home" tabIcon="custom-rdv" tabTitle="{{ 'TABS.APPOINTMENTS' | translate }}"></ion-tab>
+  <ion-tab [root]="user" tabIcon="person" tabTitle="{{ 'TABS.ACCOUNT' | translate }}"></ion-tab>
 </ion-tabs>

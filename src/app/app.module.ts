@@ -13,9 +13,7 @@ import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { TranslatePage } from '../pages/translate/translate';
 import { ComponentsModule } from '../components/components.module';
-import { SearchPage } from '../pages/search/search';
 import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
@@ -24,6 +22,7 @@ import { ShowDoctorsPage } from '../pages/show-doctors/show-doctors';
 import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
+import { DepartmentsPage } from '../pages/departments/departments';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -33,12 +32,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   declarations: [
     MyApp,
     HomePage,
-    TranslatePage,
-    SearchPage,
     TabsPage,
     UserPage,
     LoginPage,
-    ShowDoctorsPage
+    ShowDoctorsPage,
+    DepartmentsPage
   ],
   imports: [
     BrowserModule,
@@ -60,12 +58,11 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
   entryComponents: [
     MyApp,
     HomePage,
-    TranslatePage,
-    SearchPage,
     TabsPage,
     UserPage,
     LoginPage,
-    ShowDoctorsPage
+    ShowDoctorsPage,
+    DepartmentsPage
   ],
   providers: [
     StatusBar,

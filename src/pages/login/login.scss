@@ -1,42 +1,86 @@
 page-login {
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: color($colors, primary);
-    form {
-      height: 300px;
-      width: 300px;
-      border-radius: 100%;
-      background-color: #fff;
+  #container {
+    padding: 25px;
+    #back-arrow-container {
+      ion-icon {
+        font-size: 3em;
+        color: #6d6e72;
+      }
+    }
+    #logo-container {
       text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      h1 {
-        margin: 0;
+      img {
+        width: 150px;
       }
+    }
+
+    h1 {
+      color: #1ca74a;
+      margin-top: 4rem;
+      margin-bottom: 20px;
+      font-size: 2em;
+      font-weight: normal;
+    }
+
+    form {
       .error {
-        color: #ff0000;
+        color: #860000;
+        margin: 0 0 25px;
       }
-      label {
-        font-size: 1.2em;
-        margin-bottom: 7px;
+      input[type="text"], input[type="password"] {
+        border: 1px solid #eee;
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 25px;
       }
-      input {
-        width: 200px;
-        border: 0;
-        border-bottom: 1px solid #333;
-        margin-bottom: 20px;
+      a {
+        color: #999;
+        text-decoration: none;
       }
       button {
-        background-color: transparent;
-        margin-top: 15px;
-        border: .5px solid #333;
-        padding: 5px 35px;
+        width: 100%;
+        padding: 15px;
+        margin: 25px 0;
+        background-color: #3acfd5;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 3px;
+        box-shadow: 0px 2px 7px #999
+      }
+    }
+
+    #or {
+      color: #999;
+      text-align: center;
+      font-size: 1.2em;
+      margin: 0 0 25px;
+    }
+
+    #social-login {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > div {
+        width: 48%;
+        padding: 10px 0;
+        border: .5px solid #1ca74a;
+        border-radius: 3px;
+        text-align: center;
+        img {
+          height: 20px;;
+        }
+      }
+    }
+
+    #create-account {
+      text-align: center;
+      color: #999;
+      margin-top: 25px;
+      font-size: 1.1em;
+      a {
+        color: #54a9a6;
+        text-decoration: none;
+        font-weight: bold;
       }
     }
   }

@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { Storage } from '@ionic/storage';
+import { DepartmentsPage } from '../departments/departments';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +19,10 @@ export class HomePage {
 
   goToResearch() {
     this.navCtrl.parent.select(1);
+  }
+
+  goToDepartments() {
+    this.navCtrl.push(DepartmentsPage);
   }
 
   onSubmit(message) {

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { TabsPage } from '../tabs/tabs';
@@ -20,13 +19,8 @@ export class LoginPage implements OnInit {
 
   loading: boolean = false;
   error:string;
-  form: FormGroup;
 
   ngOnInit() {
-    this.form = new FormGroup({
-      email: new FormControl(),
-      password: new FormControl(),
-    });
   }
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private authService: AuthServiceProvider) {
@@ -37,20 +31,40 @@ export class LoginPage implements OnInit {
     });
   }
 
-  login() {
+  login(form) {
+    // Vérifie que le formulaire ne s'envoie pas déjà
+    if (this.loading) return;
+    // Récupère les valeurs des champs
+    const email = form.children[1].value;
+    const password = form.children[2].value;
+    // Vérifie qu'ils ne sont pas nuls
+    if (email === "" || password === "") {
+      this.error = 'Email and password can\'t be blank';
+      return;
+    }
+    // Déclenche l'authentification
     this.loading = true;
-    this.authService.login(this.form.value.email, this.form.value.password)
+    this.authService.login(email, password)
       .subscribe(result => {
+        // Si l'authentification réussit, retourne à la racine
         if (result) {
           this.navCtrl.popToRoot();
-        } else {
-          this.error = 'Username or password is incorrect';
-          this.loading = false;
         }
+        this.loading = false
       }, err => {
-        this.error = err.error.message;
-        console.log(err);
+        // Si erreur 401 => mauvais identifiants
+        if (err.status === 401) {
+          this.error = "Wrong credentials";
+        } else {
+          this.error = err.error.message;
+          console.log(err);
+        }
+        this.loading = false;
       });
+  }
+
+  goBack() {
+    this.navCtrl.pop();
   }
 
 }

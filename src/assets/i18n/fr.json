@@ -1,15 +1,36 @@
 {
-  "HOME" : {
-    "BUTTON_HEADER": "Trouver un service",
-    "APPOINTMENTS_TITLE": "Vos réservations",
-    "NO_APPOINTMENTS": "Aucune réservation pour le moment.",
-    "CONTACT_US": "Nous contacter",
-    "YOUR_MESSAGE": "Votre message...",
-    "SEND": "Envoyer"
+  "TABS": {
+    "HOME": "Accueil",
+    "HEALTH": "Santé",
+    "APPOINTMENTS": "Rendez-vous",
+    "BLOG": "Notre blog",
+    "ACCOUNT": "Compte"
   },
-  "SHOW_DOCTOR" : {
-    "SPECIALITY": "Spécialité",
-    "NO_SPECIALITY": "Veuillez renseigner une spécialité.",
-    "NO_LOCATION": "Veuillez renseigner un endroit."
+  "HOME" : {
+    "HEADER": {
+      "CATCH_PHRASE": "Comment pouvons-nous vous aider AUJOURD'HUI?",
+      "BUTTON": "Posez une question gratuite"
+    },
+    "BUBBLES": {
+      "DEPARTMENT": "Département",
+      "APPOINTMENTS": "Rendez-vous",
+      "DRUGS": "Médicaments",
+      "RESULT_LAB": "Résultat Lab",
+      "PILLS": "Rappel de pilules",
+      "MY_PLAN": "Mon plan"
+    }
+  },
+  "LOGIN": {
+    "LOGIN": "Se connecter",
+    "EMAIL": "E-mail",
+    "PASSWORD": "Mot de passe",
+    "FORGOTTEN_PASSWORD": "Mot de passe oublié ?",
+    "OR": "OU",
+    "NO_ACCOUNT": "Vous n'avez pas de compte?",
+    "CREATE_ACCOUNT": "Créez un compte."
+  },
+  "DEPARTMENTS": {
+    "TITLE": "Départements",
+    "INPUT_PLACEHOLDER": "Rechercher une spécialité"
   }
 }

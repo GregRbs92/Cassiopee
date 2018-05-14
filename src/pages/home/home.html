@@ -1,27 +1,45 @@
 <ion-content id="container">
   <section id="header">
-    <h1>Jasmine</h1>
-    <button (click)="goToResearch()">{{ 'HOME.BUTTON_HEADER' | translate }}</button>
+    <p class="catch-phrase">{{ 'HOME.HEADER.CATCH_PHRASE' | translate }}</p>
+    <button (click)="goToResearch()">{{ 'HOME.HEADER.BUTTON' | translate }}</button>
   </section>
 
-  <section padding id="appointments">
-    <h2>{{ 'HOME.APPOINTMENTS_TITLE' | translate }}</h2>
-    <p *ngIf="!(appointments?.length > 0)"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
-  </section>
-
-  <hr />
-
-  <section padding id="contact">
-    <h2>{{ 'HOME.CONTACT_US' | translate }}</h2>
-
-    <p><ion-icon name="pin"></ion-icon> 9 rue Charles Fourier, 91000 Évry, France</p>
-    <p><ion-icon name="call"></ion-icon> +336 06 06 06 06</p>
-
-    <form (submit)="onSubmit(message.value)">
-      <p class="error">{{ sendingError }}</p>
-      <textarea name="message" placeholder="{{ 'HOME.YOUR_MESSAGE' | translate }}" #message></textarea>
-      <button type="submit" *ngIf="!sending">{{ 'HOME.SEND' | translate }}</button>
-      <button type="button" *ngIf="sending"><ion-spinner></ion-spinner></button>
-    </form>
-  </section>
+  <div id="bubbles">
+    <div class="bubble-container">
+      <div (click)="goToDepartments()">
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.DEPARTMENT' | translate }}</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div>
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.APPOINTMENTS' | translate }}</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div>
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.DRUGS' | translate }}</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div>
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.RESULT_LAB' | translate }}</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div>
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.PILLS' | translate }}</span>
+      </div>
+    </div>
+    <div class="bubble-container">
+      <div>
+        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
+        <span class="name">{{ 'HOME.BUBBLES.MY_PLAN' | translate }}</span>
+      </div>
+    </div>
+  </div>
 </ion-content>
