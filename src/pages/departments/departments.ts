@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { DoctorDataProvider } from '../../providers/doctor-data/doctor-data';
+import { ListDoctorsPage } from '../list-doctors/list-doctors';
 
 /**
  * Generated class for the DepartmentsPage page.
@@ -38,5 +39,9 @@ export class DepartmentsPage implements OnInit {
     this.departments = departments.filter(dep => {
       return dep[1].toLowerCase().indexOf(query.toLowerCase()) > -1;
     });
+  }
+
+  goToDoctorsList(specialityId: number) {
+    this.navCtrl.push(ListDoctorsPage, {'specialityId': specialityId});
   }
 }

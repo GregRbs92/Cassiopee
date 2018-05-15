@@ -32,5 +32,17 @@
   "DEPARTMENTS": {
     "TITLE": "Départements",
     "INPUT_PLACEHOLDER": "Rechercher une spécialité"
+  },
+  "LIST_DOCTORS": {
+    "TITLE": "Rechercher un docteur",
+    "NO_SPECIALITY": "Veuillez sélectionner une spécialité.",
+    "NO_LOCATION": "Veuillez renseigner le lieu.",
+    "AROUND_ME": "Autour de moi",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "Rechercher une adresse",
+      "SEARCH": "Rechercher",
+      "OR": "OU",
+      "LOCATE_ME": "Me géolocaliser"
+    }
   }
 }

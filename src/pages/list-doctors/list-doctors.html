@@ -1,0 +1,42 @@
+<ion-content>
+  <header>
+    <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+    <span>{{ 'LIST_DOCTORS.TITLE' | translate }}</span>
+  </header>
+
+  <div id="location" (click)="toggleModal()">
+    <ion-icon name="pin"></ion-icon>
+    <span>{{ location | uppercase}}</span>
+  </div>
+
+  <p class="loader" *ngIf="loading"><ion-spinner></ion-spinner></p>
+
+  <p *ngIf="doctors && doctors.length == 0"><em>Aucun docteur ne correspond à votre recherche.</em></p>
+
+  <section id="doctors-list">
+    <div class="doctor" *ngFor="let d of doctors" (click)="showDoctor(d.id)">
+      <div class="doctor-photo">
+        <div *ngIf="d.photo && d.photo != ''" class="photo-container"></div>
+        <ion-icon *ngIf="!d.photo || d.photo == ''" name="contact"></ion-icon>
+      </div>
+      <div class="doctor-infos">
+        <p class="name">{{ d.nom | uppercase }} {{ d.prenom }}</p>
+        <p>{{ d.adresse }}</p>
+      </div>
+      <div class="doctor-distance">
+        <p>{{ d.distance }}km</p>
+      </div>
+    </div>
+  </section>
+
+
+  <div id="modal" *ngIf="isModalOpen">
+    <ion-icon name="close" (click)="toggleModal()"></ion-icon>
+    <div>
+      <input type="text" placeholder="{{ 'LIST_DOCTORS.MODAL.INPUT_PLACEHOLDER' | translate }}" #input>
+      <button type="button" (click)="searchDoctors(input.value)" (click)="toggleModal()">{{ 'LIST_DOCTORS.MODAL.SEARCH' | translate }}</button>
+      <p>{{ 'LIST_DOCTORS.MODAL.OR' | translate }}</p>
+      <button type="button" (click)="searchDoctorsAroundMe()" (click)="toggleModal()"><ion-icon name="pin"></ion-icon> {{ 'LIST_DOCTORS.MODAL.LOCATE_ME' | translate }}</button>
+    </div>
+  </div>
+</ion-content>

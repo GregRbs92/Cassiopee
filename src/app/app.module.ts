@@ -18,7 +18,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { LoginPage } from '../pages/login/login';
-import { ShowDoctorsPage } from '../pages/show-doctors/show-doctors';
+import { ListDoctorsPage } from '../pages/list-doctors/list-doctors';
 import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
@@ -35,7 +35,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
-    ShowDoctorsPage,
+    ListDoctorsPage,
     DepartmentsPage
   ],
   imports: [
@@ -61,7 +61,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
-    ShowDoctorsPage,
+    ListDoctorsPage,
     DepartmentsPage
   ],
   providers: [

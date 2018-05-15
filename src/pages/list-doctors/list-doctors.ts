@@ -7,29 +7,33 @@ import { Doctor } from '../../interfaces/Doctor';
 import { TranslateService } from '@ngx-translate/core';
 
 /**
- * Generated class for the ShowDoctorsPage page.
+ * Generated class for the ListDoctorsPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
  */
 
 @Component({
-  selector: 'page-show-doctors',
-  templateUrl: 'show-doctors.html',
+  selector: 'page-list-doctors',
+  templateUrl: 'list-doctors.html',
 })
-export class ShowDoctorsPage implements OnInit {
+export class ListDoctorsPage implements OnInit {
 
-  specialities: any[];
-  location: string;
+  speciality: number;
+  location: string = "Paris";
   lat: number;
   long: number;
   loading: boolean;
   error: string;
   doctors: Array<Doctor>;
 
+  isModalOpen: boolean = false;
+
   ngOnInit() {
-    this.doctorData.getSpecialities().subscribe((res) => {
-      this.specialities = res;
+    this.loading = true;
+    this.doctorData.searchDoctors(this.speciality, 48.858797, 2.333377).subscribe(doctors => {
+      this.loading = false;
+      this.doctors = doctors;
     });
   }
 
@@ -40,18 +44,27 @@ export class ShowDoctorsPage implements OnInit {
     public doctorData: DoctorDataProvider,
     public geolocation: Geolocation,
     public geocoder: NativeGeocoder) {
+      this.speciality = this.navParams.get('specialityId');
   }
 
-  searchDoctors(speciality, location) {
+  goBack() {
+    this.navCtrl.pop();
+  }
+
+  toggleModal() {
+    this.isModalOpen = !this.isModalOpen;
+  }
+
+  searchDoctors(location) {
     this.error = "";
-    if (speciality == -1) {
-      this.translate.get('SHOW_DOCTOR.NO_SPECIALITY').subscribe(val => {
+    if (this.speciality == -1) {
+      this.translate.get('LIST_DOCTORS.NO_SPECIALITY').subscribe(val => {
         this.error = val;
       });
       return;
     }
     if (!location || location == "") {
-      this.translate.get('SHOW_DOCTOR.NO_LOCATION').subscribe(val => {
+      this.translate.get('LIST_DOCTORS.NO_LOCATION').subscribe(val => {
         this.error = val;
       });
       return;
@@ -61,9 +74,10 @@ export class ShowDoctorsPage implements OnInit {
       this.geocoder.forwardGeocode(location).then((res: NativeGeocoderForwardResult) => {
         this.lat = parseFloat(res[0].latitude);
         this.long = parseFloat(res[0].longitude);
-        this.doctorData.searchDoctors(speciality, this.lat, this.long).subscribe(doctors => {
+        this.doctorData.searchDoctors(this.speciality, this.lat, this.long).subscribe(doctors => {
           this.loading = false;
           this.doctors = doctors;
+          this.location = location;
         });
       })
         .catch(err => {
@@ -73,10 +87,11 @@ export class ShowDoctorsPage implements OnInit {
     });
   }
 
-  searchDoctorsAroundMe(speciality) {
+  searchDoctorsAroundMe() {
+
     this.error = "";
-    if (speciality == -1) {
-      this.translate.get('SHOW_DOCTOR.NO_SPECIALITY').subscribe(val => {
+    if (this.speciality == -1) {
+      this.translate.get('LIST_DOCTORS.NO_SPECIALITY').subscribe(val => {
         this.error = val;
       });
       return;
@@ -86,9 +101,12 @@ export class ShowDoctorsPage implements OnInit {
       this.geolocation.getCurrentPosition({ timeout: 10000 }).then(pos => {
         this.lat = pos.coords.latitude;
         this.long = pos.coords.longitude;
-        this.doctorData.searchDoctors(speciality, this.lat, this.long).subscribe(doctors => {
+        this.doctorData.searchDoctors(this.speciality, this.lat, this.long).subscribe(doctors => {
           this.loading = false;
           this.doctors = doctors;
+          this.translate.get('LIST_DOCTORS.AROUND_ME').subscribe(val => {
+            this.location = val;
+          });
         });
       })
       .catch(err => {
