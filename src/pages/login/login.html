@@ -14,7 +14,7 @@
       <input type="text" placeholder="{{ 'LOGIN.EMAIL' | translate }}" required>
       <input type="password" placeholder="{{ 'LOGIN.PASSWORD' | translate }}" required>
 
-      <a href="#">{{ 'LOGIN.FORGOTTEN_PASSWORD' | translate }}</a>
+      <a (click)="goToForgottenPassword()">{{ 'LOGIN.FORGOTTEN_PASSWORD' | translate }}</a>
 
       <button type="submit">{{ 'LOGIN.LOGIN' | translate }}</button>
     </form>

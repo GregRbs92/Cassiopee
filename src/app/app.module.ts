@@ -23,6 +23,7 @@ import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
 import { DepartmentsPage } from '../pages/departments/departments';
+import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -36,7 +37,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserPage,
     LoginPage,
     ListDoctorsPage,
-    DepartmentsPage
+    DepartmentsPage,
+    ForgottenPasswordPage
   ],
   imports: [
     BrowserModule,
@@ -62,7 +64,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserPage,
     LoginPage,
     ListDoctorsPage,
-    DepartmentsPage
+    DepartmentsPage,
+    ForgottenPasswordPage
   ],
   providers: [
     StatusBar,

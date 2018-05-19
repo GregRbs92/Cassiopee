@@ -3,6 +3,7 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { TabsPage } from '../tabs/tabs';
 import 'rxjs/add/operator/catch';
+import { ForgottenPasswordPage } from '../forgotten-password/forgotten-password';
 
 /**
  * Generated class for the LoginPage page.
@@ -65,6 +66,10 @@ export class LoginPage implements OnInit {
 
   goBack() {
     this.navCtrl.pop();
+  }
+
+  goToForgottenPassword() {
+    this.navCtrl.push(ForgottenPasswordPage);
   }
 
 }

@@ -12,7 +12,7 @@
       "BUTTON": "Posez une question gratuite"
     },
     "BUBBLES": {
-      "DEPARTMENT": "Département",
+      "DEPARTMENT": "Départements",
       "APPOINTMENTS": "Rendez-vous",
       "DRUGS": "Médicaments",
       "RESULT_LAB": "Résultat Lab",
@@ -44,5 +44,11 @@
       "OR": "OU",
       "LOCATE_ME": "Me géolocaliser"
     }
+  },
+  "FORGOTTEN_PASSWORD": {
+    "FORGOTTEN_PASSWORD": "Mot de passe oublié",
+    "TEXT": "Nous avons juste besoin de votre e-mail renseigné lors de l'inscription pour vous envoyer le lien de réinitialisation.",
+    "PLACEHOLDER": "E-mail",
+    "BUTTON": "Réinitialiser le mot de passe"
   }
 }

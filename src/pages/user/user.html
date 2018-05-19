@@ -1,16 +1,25 @@
-<ion-content padding>
+<ion-content>
 
-  <section *ngIf="isLoggedIn" id="connected">
-    <h1>Salut {{ user.username }} / {{ user.email }}</h1>
-    <button (click)="logout()">Déconnexion</button>
-  </section>
+<header>
+  <h1>Mon compte</h1>
+</header>
 
-  <section *ngIf="!isLoggedIn" id="not-connected">
-    <ion-icon name="pulse"></ion-icon>
-    <h1>Vous n'êtes pas connecté...</h1>
-    <button (click)="goToLoginPage()">Se connecter !</button>
-    <p>ou</p>
-    <button (click)="goToLoginPage()">S'inscrire !</button>
-  </section>
+<h2>Profil</h2>
+
+<ul>
+  <li>Informations de base</li>
+  <li>Changer le mot de passe</li>
+  <li>Paramètres</li>
+</ul>
+
+<ul>
+  <li>Informations légales</li>
+  <li>Envoyer des commentaires</li>
+</ul>
+
+<ul>
+  <li *ngIf="!isLoggedIn" (click)="goToLoginPage()">Connexion</li>
+  <li *ngIf="isLoggedIn" (click)="logout()">Déconnexion</li>
+</ul>
 
 </ion-content>

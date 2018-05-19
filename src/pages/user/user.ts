@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { Storage } from '@ionic/storage';
 import { LoginPage } from '../login/login';
 
 /**
@@ -18,27 +17,14 @@ import { LoginPage } from '../login/login';
 export class UserPage {
 
   isLoggedIn:boolean = false;
-  user:any = {'username': 'Username', 'email': 'Email'};
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthServiceProvider, private storage:Storage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private auth:AuthServiceProvider) {
   }
 
   ionViewWillEnter() {
     this.auth.isAuthenticated().then(val => {
       if (val) {
         this.isLoggedIn = true;
-        this.storage.get('user').then(res => {
-          if (res) {
-            this.user = res;
-          }
-          else {
-            this.auth.getUser().then(res => {
-              res.subscribe(user => {
-                this.user = user;
-              });
-            });
-          }
-        });
       }
     });
   }

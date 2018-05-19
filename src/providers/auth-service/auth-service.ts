@@ -16,7 +16,6 @@ export class AuthServiceProvider {
 
     return this.http.post('https://itmp-api.herokuapp.com/api/clients/login', { 'email': email, 'password': password })
       .map((response: any) => {
-        console.log(response);
         // login successful if there's a token in the response
         let token = response.id;
         if (token) {
@@ -24,16 +23,16 @@ export class AuthServiceProvider {
           let ttl = Date.now() + response.ttl * 1000;
           let userId = response.userId;
           // store email and jwt token in local storage to keep user logged in between page refreshes
-          this.storage.set('access_token', {'token': token, 'ttl': ttl, 'userId': userId});
-          this.loggedIn = true;
-
-          // store the user in storage
-          this.getUser().then(res => {
-            res.subscribe(user => {
-              console.warn(user);
-              this.storage.set('user', user);
+          this.storage.set('access_token', {'token': token, 'ttl': ttl, 'userId': userId})
+          .then(() => {
+            // store the user in storage
+            this.getUser().then(res => {
+              res.subscribe(user => {
+                this.storage.set('user', user);
+              });
             });
           });
+          this.loggedIn = true;
 
           // return true to indicate successful login
           return true;
@@ -65,6 +64,7 @@ export class AuthServiceProvider {
 
   logout() {
     this.storage.remove('access_token');
+    this.storage.remove('user');
   }
 }
 

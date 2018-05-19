@@ -60,7 +60,6 @@ export class DoctorDataProvider {
   searchDoctors(speciality, lat, long):Observable<Array<Doctor>> {
     return this.http.get<Array<Doctor>>(`https://itmp-api.herokuapp.com/api/docteurs/around?speciality=${speciality}&latitude=${lat}&longitude=${long}`)
       .map(doctors => {
-        console.log(doctors);
         doctors.sort((a, b) => {
           if (a.distance <= b.distance)
             return -1;

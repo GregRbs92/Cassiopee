@@ -27,6 +27,7 @@ page-home {
         background-color: #19d7e7;
         color: #fff;
         width: 60%;
+        min-width: 215px;
         font-size: 1.1em;
         padding: 5px;
         line-height: 34px;
@@ -37,7 +38,7 @@ page-home {
     #bubbles {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
+      align-items: flex-start;
       padding: 50px 5px 0;
       .bubble-container {
         width: 33.3333333%;
@@ -51,6 +52,7 @@ page-home {
           justify-content: center;
           align-items: center;
           flex-direction: column;
+          text-align: center;
           .bubble {
             width: 80px;
             height: 80px;
