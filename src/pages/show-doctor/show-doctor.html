@@ -1,0 +1,52 @@
+<ion-content>
+  <header>
+    <div>
+      <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+      <span>{{ 'SHOW_DOCTOR.TITLE' | translate }}</span>
+    </div>
+    <div>
+      <ion-icon name="mail"></ion-icon>
+    </div>
+  </header>
+
+  <div id="general-infos-container">
+    <div id="profil-photo" style='background-image: url("../../assets/imgs/homepage/paris.jpg")'></div>
+    <div class="infos">
+      <p>Dr. {{ doctor ? doctor.prenom : '' }} {{ doctor ? doctor.nom : '' }}</p>
+      <p>{{ specialite }}</p>
+      <p>{{ 'SHOW_DOCTOR.EXPERIENCE' | translate:{years: '21+'} }}</p>
+      <br />
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star"></ion-icon>
+      <ion-icon name="star-half"></ion-icon>
+    </div>
+  </div>
+
+  <div id="body">
+    <div id="location">
+      <h1>{{ 'SHOW_DOCTOR.LOCATION' | translate }}</h1>
+      <div>
+        <h2>{{ doctor ? doctor.adresse : '' }}</h2>
+        <p>{{ doctor ? doctor.code_postal : '' }}, {{ doctor ? doctor.ville : '' }}</p>
+      </div>
+    </div>
+    <div id="skills">
+      <h1>{{ 'SHOW_DOCTOR.SKILLS' | translate }}</h1>
+      <div>
+        <p>Chirurgie cardiaque, hémopathie, ...</p>
+      </div>
+    </div>
+    <div id="comments">
+      <h1>{{ 'SHOW_DOCTOR.FEEDBACKS' | translate }} ({{ avis.length }})</h1>
+      <div>
+        <p *ngIf="avis.length === 0"><em>{{ 'SHOW_DOCTOR.NO_FEEDBACK' | translate }}</em></p>
+      </div>
+    </div>
+  </div>
+
+  <div id="appointment">
+    <button>{{ 'SHOW_DOCTOR.APPOINTMENT' | translate }}</button>
+  </div>
+</ion-content>

@@ -1,45 +1,25 @@
 <ion-content id="container">
   <section id="header">
     <p class="catch-phrase">{{ 'HOME.HEADER.CATCH_PHRASE' | translate }}</p>
-    <button (click)="goToResearch()">{{ 'HOME.HEADER.BUTTON' | translate }}</button>
   </section>
 
-  <div id="bubbles">
-    <div class="bubble-container">
-      <div (click)="goToDepartments()">
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.DEPARTMENT' | translate }}</span>
-      </div>
-    </div>
-    <div class="bubble-container">
+  <section id="appointments">
+    <h1>{{ 'HOME.YOUR_APPOINTMENTS' | translate }}</h1>
+    <p class="no-appointments" *ngIf="appointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
+  </section>
+
+  <hr>
+
+  <section id="contact">
+    <h1>{{ 'HOME.CONTACT_US' | translate }}</h1>
+    <form (submit)="onSubmit(nom.value, prenom.value, mail.value, message.value)">
       <div>
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.APPOINTMENTS' | translate }}</span>
+        <input type="text" placeholder="{{ 'HOME.FORM.LAST_NAME' | translate }}" spellcheck="false" required #nom>
+        <input type="text" placeholder="{{ 'HOME.FORM.FIRST_NAME' | translate }}" spellcheck="false" required #prenom>
       </div>
-    </div>
-    <div class="bubble-container">
-      <div>
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.DRUGS' | translate }}</span>
-      </div>
-    </div>
-    <div class="bubble-container">
-      <div>
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.RESULT_LAB' | translate }}</span>
-      </div>
-    </div>
-    <div class="bubble-container">
-      <div>
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.PILLS' | translate }}</span>
-      </div>
-    </div>
-    <div class="bubble-container">
-      <div>
-        <div class="bubble" style="background-image: url('../../assets/imgs/homepage/paris.jpg')"></div>
-        <span class="name">{{ 'HOME.BUBBLES.MY_PLAN' | translate }}</span>
-      </div>
-    </div>
-  </div>
+      <input type="email" placeholder="{{ 'HOME.FORM.EMAIL' | translate }}" spellcheck="false" required #mail>
+      <textarea placeholder="{{ 'HOME.FORM.MESSAGE' | translate }}" spellcheck="false" required #message></textarea>
+      <button type="submit">{{ 'HOME.FORM.SEND' | translate }}</button>
+    </form>
+  </section>
 </ion-content>

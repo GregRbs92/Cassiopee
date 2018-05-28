@@ -1,7 +1,7 @@
 {
   "TABS": {
     "HOME": "Accueil",
-    "HEALTH": "Santé",
+    "SERVICES": "Services",
     "APPOINTMENTS": "Rendez-vous",
     "BLOG": "Notre blog",
     "ACCOUNT": "Compte"
@@ -11,14 +11,24 @@
       "CATCH_PHRASE": "Comment pouvons-nous vous aider AUJOURD'HUI?",
       "BUTTON": "Posez une question gratuite"
     },
-    "BUBBLES": {
-      "DEPARTMENT": "Départements",
-      "APPOINTMENTS": "Rendez-vous",
-      "DRUGS": "Médicaments",
-      "RESULT_LAB": "Résultat Lab",
-      "PILLS": "Rappel de pilules",
-      "MY_PLAN": "Mon plan"
+    "YOUR_APPOINTMENTS": "Vos rendez-vous",
+    "NO_APPOINTMENTS": "Aucun rendez-vous pour le moment",
+    "CONTACT_US": "Nous contacter",
+    "FORM": {
+      "LAST_NAME": "Nom",
+      "FIRST_NAME": "Prénom",
+      "EMAIL": "E-mail",
+      "MESSAGE": "Votre message...",
+      "SEND": "Envoyer"
     }
+  },
+  "SERVICES": {
+    "TITLE": "Nos services",
+    "DOCTORS": "Docteurs",
+    "INTERPRETERS": "Interpètes",
+    "HOTELS": "Hôtels",
+    "TAXIS": "Taxis",
+    "NURSES": "Infirmières"
   },
   "LOGIN": {
     "LOGIN": "Se connecter",
@@ -44,6 +54,15 @@
       "OR": "OU",
       "LOCATE_ME": "Me géolocaliser"
     }
+  },
+  "SHOW_DOCTOR": {
+    "TITLE": "Profil du docteur",
+    "EXPERIENCE": "{{ years }} ans d'expérience",
+    "LOCATION": "LOCALISATION",
+    "SKILLS": "SPÉCIALISATIONS",
+    "FEEDBACKS": "AVIS",
+    "APPOINTMENT": "PRENEZ RENDEZ-VOUS",
+    "NO_FEEDBACK": "Aucun avis pour le moment"
   },
   "FORGOTTEN_PASSWORD": {
     "FORGOTTEN_PASSWORD": "Mot de passe oublié",

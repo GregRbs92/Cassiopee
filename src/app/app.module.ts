@@ -12,18 +12,23 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { IonicStorageModule } from '@ionic/storage';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ComponentsModule } from '../components/components.module';
-import { TabsPage } from '../pages/tabs/tabs';
-import { UserPage } from '../pages/user/user';
-import { AuthServiceProvider } from '../providers/auth-service/auth-service';
-import { LoginPage } from '../pages/login/login';
-import { ListDoctorsPage } from '../pages/list-doctors/list-doctors';
-import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
+
 import { Geolocation } from '@ionic-native/geolocation';
 import { NativeGeocoder } from '@ionic-native/native-geocoder';
+
+import { AuthServiceProvider } from '../providers/auth-service/auth-service';
+import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
+
+import { ComponentsModule } from '../components/components.module';
+import { HomePage } from '../pages/home/home';
+import { TabsPage } from '../pages/tabs/tabs';
+import { UserPage } from '../pages/user/user';
+import { LoginPage } from '../pages/login/login';
+import { ListDoctorsPage } from '../pages/list-doctors/list-doctors';
 import { DepartmentsPage } from '../pages/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
+import { ShowDoctorPage } from '../pages/show-doctor/show-doctor';
+import { ServicesPage } from '../pages/services/services';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -38,7 +43,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginPage,
     ListDoctorsPage,
     DepartmentsPage,
-    ForgottenPasswordPage
+    ForgottenPasswordPage,
+    ShowDoctorPage,
+    ServicesPage
   ],
   imports: [
     BrowserModule,
@@ -65,7 +72,9 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginPage,
     ListDoctorsPage,
     DepartmentsPage,
-    ForgottenPasswordPage
+    ForgottenPasswordPage,
+    ShowDoctorPage,
+    ServicesPage
   ],
   providers: [
     StatusBar,

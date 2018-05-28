@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-import { Storage } from '@ionic/storage';
 import { DepartmentsPage } from '../departments/departments';
 
 @Component({
@@ -14,7 +12,7 @@ export class HomePage {
   sendingError:string;
   sending:boolean = false;
 
-  constructor(public navCtrl: NavController, private auth:AuthServiceProvider, private storage:Storage) {
+  constructor(public navCtrl: NavController) {
   }
 
   goToResearch() {
@@ -25,20 +23,12 @@ export class HomePage {
     this.navCtrl.push(DepartmentsPage);
   }
 
-  onSubmit(message) {
-    this.sending = true;
-    this.auth.isAuthenticated().then(val => {
-      if(!val) {
-        this.sendingError = "Vous devez être connecté pour envoyer un message";
-        this.sending = false
-      } else {
-        this.storage.get('user').then(user => {
-          let body = {'email': user.email, 'message': message};
-          console.log(body);
-          this.sending = false;
-        })
-      }
-    });
+  onSubmit(last, first, email, message) {
+    if (!this.sending) {
+      this.sending = true;
+      alert("Sending message: " + message + "\nFrom: " + email + "\nSo called: " + first + " " + last);
+      this.sending = false;
+    }
   }
 
 }

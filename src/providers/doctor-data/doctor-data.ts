@@ -57,6 +57,10 @@ export class DoctorDataProvider {
       })
   }
 
+  getSpeciality(specialityId: number) {
+    return this.http.get<DoctorSpeciality>(`https://itmp-api.herokuapp.com/api/specialites/${specialityId}`);
+  }
+
   searchDoctors(speciality, lat, long):Observable<Array<Doctor>> {
     return this.http.get<Array<Doctor>>(`https://itmp-api.herokuapp.com/api/docteurs/around?speciality=${speciality}&latitude=${lat}&longitude=${long}`)
       .map(doctors => {
@@ -69,6 +73,10 @@ export class DoctorDataProvider {
 
         return doctors;
       });
+  }
+
+  getDoctor(doctorId: number) {
+    return this.http.get<Doctor>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}`);
   }
 
 }

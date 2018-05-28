@@ -7,6 +7,7 @@ export interface Doctor {
   adresse:string;
   longitude:number;
   latitude:number;
+  specialiteId: number;
   specialite:DoctorSpeciality;
   services:Array<string>;
   distance:number;

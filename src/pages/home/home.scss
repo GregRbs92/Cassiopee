@@ -7,7 +7,7 @@ page-home {
       align-items: center;
       justify-content: flex-start;
       height: 350px;
-      background-image: url('../assets/imgs/homepage/paris.jpg');
+      background-image: url('../assets/imgs/homepage/header.jpg');
       background-position: center center;
       background-size: cover;
       .catch-phrase {
@@ -19,48 +19,60 @@ page-home {
         max-width: 230px;
         font-size: 1.2em;
       }
-      button {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translate(-50%, 50%);
-        background-color: #19d7e7;
-        color: #fff;
-        width: 60%;
-        min-width: 215px;
-        font-size: 1.1em;
-        padding: 5px;
-        line-height: 34px;
-        border-radius: 5px;
+    }
+
+    #appointments {
+      padding: 20px;
+      h1 {
+        color: #1ca74a;
+        margin-top: 0.5rem;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        font-weight: normal;
       }
     }
 
-    #bubbles {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: flex-start;
-      padding: 50px 5px 0;
-      .bubble-container {
-        width: 33.3333333%;
-        margin-bottom: 40px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        & > div {
+    hr {
+      width: 50%;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    #contact {
+      padding: 20px;
+      h1 {
+        color: #1ca74a;
+        margin-top: 0.5rem;
+        margin-bottom: 20px;
+        font-size: 1.8em;
+        font-weight: normal;
+      }
+      form {
+        > div {
           display: flex;
-          justify-content: center;
+          justify-content: space-between;
           align-items: center;
-          flex-direction: column;
-          text-align: center;
-          .bubble {
-            width: 80px;
-            height: 80px;
-            border-radius: 100%;
-            background-position: center center;
-            background-size: cover;
-            margin-bottom: 5px;
+          input {
+            width: 48%;
           }
+        }
+        input, textarea {
+          border: 1px solid #eee;
+          width: 100%;
+          padding: 10px 15px;
+          margin-bottom: 25px;
+        }
+        textarea {
+          height: 150px;
+          resize: none;
+        }
+        button {
+          width: 100%;
+          padding: 13px;
+          background-color: #3acfd5;
+          color: #fff;
+          font-size: 1.2em;
+          border-radius: 3px;
+          box-shadow: 0px 2px 7px #999;
         }
       }
     }

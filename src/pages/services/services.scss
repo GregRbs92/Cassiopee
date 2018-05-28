@@ -1,0 +1,35 @@
+page-services {
+  h1 {
+    color: #1ca74a;
+    margin-left: 20px;
+    margin-top: 4rem;
+    margin-bottom: 0;
+    font-size: 2em;
+    font-weight: normal;
+  }
+  #services {
+    padding: 20px;
+    .service {
+      width: 100%;
+      height: 150px;
+      margin-bottom: 10px;
+      background-position: center center;
+      background-size: cover;
+      .black-veil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        label {
+          color: #fff;
+          font-size: 1.4em;
+          letter-spacing: 1px;
+          text-shadow: 1px 1px 7px #000;
+        }
+      }
+    }
+  }
+}

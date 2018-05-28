@@ -2,7 +2,6 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { Storage } from '@ionic/storage';
-import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class AuthServiceProvider {
@@ -26,10 +25,8 @@ export class AuthServiceProvider {
           this.storage.set('access_token', {'token': token, 'ttl': ttl, 'userId': userId})
           .then(() => {
             // store the user in storage
-            this.getUser().then(res => {
-              res.subscribe(user => {
-                this.storage.set('user', user);
-              });
+            this.getUser().then(user => {
+              this.storage.set('user', user);
             });
           });
           this.loggedIn = true;
@@ -54,11 +51,18 @@ export class AuthServiceProvider {
     });
   }
 
-  getUser(): Promise<Observable<any>> {
-    return this.storage.get('access_token').then(val => {
-      if (val) {
-        return this.http.get(`https://itmp-api.herokuapp.com/api/clients/${val.userId}?access_token=${val.token}`);
-      }
+  getUser(): Promise<any> {
+    return new Promise((resolve, reject) => {
+      this.storage.get('access_token').then(val => {
+        if (val) {
+          return this.http.get(`https://itmp-api.herokuapp.com/api/clients/${val.userId}?access_token=${val.token}`).subscribe(user => {
+            resolve(user);
+          });
+        }
+        else {
+          reject();
+        }
+      });
     });
   }
 

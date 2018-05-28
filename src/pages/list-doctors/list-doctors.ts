@@ -5,6 +5,7 @@ import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/nativ
 import { Geolocation } from '@ionic-native/geolocation';
 import { Doctor } from '../../interfaces/Doctor';
 import { TranslateService } from '@ngx-translate/core';
+import { ShowDoctorPage } from '../show-doctor/show-doctor';
 
 /**
  * Generated class for the ListDoctorsPage page.
@@ -117,7 +118,7 @@ export class ListDoctorsPage implements OnInit {
   }
 
   showDoctor(id_doctor) {
-    console.log(id_doctor);
+    this.navCtrl.push(ShowDoctorPage, {'doctorId': id_doctor});
   }
 
 }
