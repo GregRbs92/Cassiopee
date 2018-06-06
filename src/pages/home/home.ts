@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DepartmentsPage } from '../departments/departments';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-home',
@@ -10,9 +11,10 @@ export class HomePage {
 
   appointments = [];
   sendingError:string;
+  sendingSuccess: string;
   sending:boolean = false;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, private http: HttpClient) {
   }
 
   goToResearch() {
@@ -24,10 +26,20 @@ export class HomePage {
   }
 
   onSubmit(last, first, email, message) {
+    if (last === "" || first === "" || email === "" || message === "") {
+      this.sendingError = "Veuillez renseigner tous les champs.";
+      return;
+    }
     if (!this.sending) {
+      this.sendingSuccess = "";
+      this.sendingError = "";
       this.sending = true;
-      alert("Sending message: " + message + "\nFrom: " + email + "\nSo called: " + first + " " + last);
-      this.sending = false;
+      this.http.post(`http://localhost:8000/clients/send-contact-email`, {nom: last, prenom: first, email: email, message: message}).subscribe(() => {
+        this.sendingSuccess = "Votre message a bien été envoyé";
+        this.sending = false;
+      }, err => {
+        this.sendingError = err.message;
+      });
     }
   }
 

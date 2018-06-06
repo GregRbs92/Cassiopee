@@ -13,6 +13,8 @@
   <section id="contact">
     <h1>{{ 'HOME.CONTACT_US' | translate }}</h1>
     <form (submit)="onSubmit(nom.value, prenom.value, mail.value, message.value)">
+      <p *ngIf="sendingError" class="error">{{ sendingError }}</p>
+      <p *ngIf="sendingSuccess" class="success">{{ sendingSuccess }}</p>
       <div>
         <input type="text" placeholder="{{ 'HOME.FORM.LAST_NAME' | translate }}" spellcheck="false" required #nom>
         <input type="text" placeholder="{{ 'HOME.FORM.FIRST_NAME' | translate }}" spellcheck="false" required #prenom>
