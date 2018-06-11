@@ -1,9 +1,8 @@
 {
   "TABS": {
-    "HOME": "Accueil",
+    "HOME": "Accueil"
     "SERVICES": "Services",
     "APPOINTMENTS": "Rendez-vous",
-    "BLOG": "Notre blog",
     "ACCOUNT": "Compte"
   },
   "HOME" : {
@@ -26,9 +25,9 @@
     "TITLE": "Nos services",
     "DOCTORS": "Docteurs",
     "INTERPRETERS": "Interprètes",
-    "HOTELS": "Hôtels",
-    "TAXIS": "Taxis",
-    "NURSES": "Infirmières"
+    "HOTELS": "Logements",
+    "TAXIS": "Transports",
+    "NURSES": "Infirmiers / Infirmières"
   },
   "LOGIN": {
     "LOGIN": "Se connecter",
@@ -36,11 +35,11 @@
     "PASSWORD": "Mot de passe",
     "FORGOTTEN_PASSWORD": "Mot de passe oublié ?",
     "OR": "OU",
-    "NO_ACCOUNT": "Vous n'avez pas de compte?",
+    "NO_ACCOUNT": "Vous n'avez pas de compte ?",
     "CREATE_ACCOUNT": "Créez un compte."
   },
   "DEPARTMENTS": {
-    "TITLE": "Départements",
+    "TITLE": "Spécialités",
     "INPUT_PLACEHOLDER": "Rechercher une spécialité"
   },
   "LIST_DOCTORS": {
@@ -60,8 +59,9 @@
     "EXPERIENCE": "{{ years }} ans d'expérience",
     "LOCATION": "LOCALISATION",
     "SKILLS": "SPÉCIALISATIONS",
+    "RDV": "CONSULTATIONS",
     "FEEDBACKS": "AVIS",
-    "APPOINTMENT": "PRENEZ RENDEZ-VOUS",
+    "APPOINTMENT": "PRENDRE RENDEZ-VOUS",
     "NO_FEEDBACK": "Aucun avis pour le moment"
   },
   "FORGOTTEN_PASSWORD": {
