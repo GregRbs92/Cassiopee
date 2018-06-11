@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { Doctor } from '../../interfaces/Doctor';
-import { DoctorDataProvider } from '../../providers/doctor-data/doctor-data';
+import { Doctor } from '../../../interfaces/Doctor';
+import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 import { TranslateService } from '@ngx-translate/core';
+import { DoctorBookingPage } from '../doctor-booking/doctor-booking';
 
 @Component({
   selector: 'page-show-doctor',
@@ -26,6 +27,10 @@ export class ShowDoctorPage {
 
   goBack() {
     this.navCtrl.pop();
+  }
+
+  goToBooking() {
+    this.navCtrl.push(DoctorBookingPage);
   }
 
 }

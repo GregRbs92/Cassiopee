@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { DepartmentsPage } from '../departments/departments';
+import { DepartmentsPage } from '../doctors/departments/departments';
 import { HttpClient } from '@angular/common/http';
 
 @Component({

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DepartmentsPage } from '../departments/departments';
+import { DepartmentsPage } from '../doctors/departments/departments';
 
 @Component({
   selector: 'page-services',

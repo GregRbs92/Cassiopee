@@ -1,0 +1,5 @@
+<div id="free-time">
+  <div class="free-time" *ngFor="let f of getFreeHours()" (click)="onClick($event, f[0], f[1])">
+    {{ mom(f[0]).tz('Europe/Paris').format('LT') }} - {{ mom(f[1]).tz('Europe/Paris').format('LT') }}
+  </div>
+</div>

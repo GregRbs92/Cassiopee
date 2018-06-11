@@ -1,20 +1,72 @@
 {
+  "TABS": {
+    "HOME": "Home",
+    "SERVICES": "Services",
+    "APPOINTMENTS": "Appointments",
+    "ACCOUNT": "Account"
+  },
   "HOME" : {
     "HEADER": {
-      "CATCH_PHRASE": "Comment pouvons-nous vous aier AUJOURD'HUI?"
+      "CATCH_PHRASE": "How can we help you TODAY?",
+      "BUTTON": "Ask a free question"
     },
-    "BUBBLES": {
-      "DEPARTMENT": "Département",
-      "APPOINTMENTS": "Rendez-vous",
-      "DRUGS": "Médicaments",
-      "RESULT_LAB": "Résultat Lab",
-      "PILLS": "Rappel de pilules",
-      "MY_PLAN": "Mon plan"
+    "YOUR_APPOINTMENTS": "Your appointments",
+    "NO_APPOINTMENTS": "No appointments for now",
+    "CONTACT_US": "Contact us",
+    "FORM": {
+      "LAST_NAME": "Last Name",
+      "FIRST_NAME": "First Name",
+      "EMAIL": "Email",
+      "MESSAGE": "Your message...",
+      "SEND": "Send"
     }
   },
-  "SHOW_DOCTOR" : {
-    "SPECIALITY": "Speciality",
-    "NO_SPECIALITY": "You have not selected any speciality.",
-    "NO_LOCATION": "You have not chosen the location."
+  "SERVICES": {
+    "TITLE": "Our services",
+    "DOCTORS": "Doctors",
+    "INTERPRETERS": "Interpreters",
+    "HOTELS": "Hotels",
+    "TAXIS": "Taxis",
+    "NURSES": "Nurses"
+  },
+  "LOGIN": {
+    "LOGIN": "Log in",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "FORGOTTEN_PASSWORD": "Forgotten password ?",
+    "OR": "OR",
+    "NO_ACCOUNT": "No account ?",
+    "CREATE_ACCOUNT": "Create an account."
+  },
+  "DEPARTMENTS": {
+    "TITLE": "Departments",
+    "INPUT_PLACEHOLDER": "Search for a speciality"
+  },
+  "LIST_DOCTORS": {
+    "TITLE": "Search for a doctor",
+    "NO_SPECIALITY": "Select a speciality.",
+    "NO_LOCATION": "Select a location.",
+    "AROUND_ME": "Around me",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "Search for an address",
+      "SEARCH": "Search",
+      "OR": "OR",
+      "LOCATE_ME": "Geolocate me"
+    }
+  },
+  "SHOW_DOCTOR": {
+    "TITLE": "Doctor profile",
+    "EXPERIENCE": "{{ years }} years of experience",
+    "LOCATION": "LOCATION",
+    "SKILLS": "SKILLS",
+    "FEEDBACKS": "FEEDBACKS",
+    "APPOINTMENT": "BOOK AN APPOINTMENT",
+    "NO_FEEDBACK": "No feedbacks for now"
+  },
+  "FORGOTTEN_PASSWORD": {
+    "FORGOTTEN_PASSWORD": "Forgotten password",
+    "TEXT": "We only need the email you gave us when you registered to send you the link.",
+    "PLACEHOLDER": "Email",
+    "BUTTON": "Reinitialize your password"
   }
 }

@@ -1,0 +1,19 @@
+<ion-content>
+
+  <header>
+    <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+    <span>{{ 'BOOK_DOCTOR.TITLE' | translate }}</span>
+  </header>
+
+  <app-calendar
+  [events]="events"
+  [locale]="locale"
+  [showFreeTime]="true"
+  [startHour]="9"
+  [endHour]="17"
+  [interval]="15"
+  [freeDays]="[0]"
+  (freeTimeClicked)="book($event)"
+  ></app-calendar>
+
+</ion-content>

@@ -1,0 +1,36 @@
+<div id="month-calendar">
+  <div class="month-navigator">
+    <span (click)="previousMonth()" class="nav">&lt;</span>
+    <span>{{ months[month] | titlecase }} {{ year }}</span>
+    <span (click)="nextMonth()" class="nav">&gt;</span>
+  </div>
+  <div class="day-names">
+    <p *ngFor="let d of days; let i = index">{{ days[(i+1) % 7] | titlecase }}</p>
+  </div>
+  <div class="calendar-body">
+    <div class="grey day" *ngFor="let d of getRangePreviousDays()" (click)="setDate(d); previousMonth()">
+      <span>{{ d }}</span>
+    </div>
+    <div class="day" [class.grey]="isFreeDay(d+1)" *ngFor="let d of getRangeDays()" (click)="setDate(d+1)">
+      <span [ngClass]="{'today': d+1 === date}">{{ d + 1}}</span>
+      <div class="events" *ngIf="getDayEvents(year, month, d+1).length > 0">
+        <div class="event"></div>
+      </div>
+    </div>
+    <div class="grey day" *ngFor="let d of getRangeNextDays()" (click)="setDate(d+1); nextMonth()">
+      <span>{{ d + 1}}</span>
+    </div>
+  </div>
+</div>
+
+<calendar-free-hours *ngIf="showFreeTime"
+  [date]="date"
+  [month]="month"
+  [year]="year"
+  [events]="events"
+  [startHour]="startHour"
+  [endHour]="endHour"
+  [interval]="interval"
+  [freeDays]="freeDays"
+  (freeTimeClicked)="onFreeTimeClick($event)"
+></calendar-free-hours>

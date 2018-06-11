@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams, Platform } from 'ionic-angular';
-import { DoctorDataProvider } from '../../providers/doctor-data/doctor-data';
+import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/native-geocoder';
 import { Geolocation } from '@ionic-native/geolocation';
-import { Doctor } from '../../interfaces/Doctor';
+import { Doctor } from '../../../interfaces/Doctor';
 import { TranslateService } from '@ngx-translate/core';
 import { ShowDoctorPage } from '../show-doctor/show-doctor';
 

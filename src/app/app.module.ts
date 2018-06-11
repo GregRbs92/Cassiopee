@@ -24,11 +24,15 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { LoginPage } from '../pages/login/login';
-import { ListDoctorsPage } from '../pages/list-doctors/list-doctors';
-import { DepartmentsPage } from '../pages/departments/departments';
+import { ListDoctorsPage } from '../pages/doctors/list-doctors/list-doctors';
+import { DepartmentsPage } from '../pages/doctors/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
-import { ShowDoctorPage } from '../pages/show-doctor/show-doctor';
+import { ShowDoctorPage } from '../pages/doctors/show-doctor/show-doctor';
 import { ServicesPage } from '../pages/services/services';
+import { DoctorBookingPage } from '../pages/doctors/doctor-booking/doctor-booking';
+
+import { CalendarComponent } from '../components/calendar/calendar.component';
+import { CalendarFreeHoursComponent } from '../components/calendar-free-hours/calendar-free-hours.component';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -45,7 +49,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DepartmentsPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
-    ServicesPage
+    ServicesPage,
+    DoctorBookingPage,
+    CalendarComponent,
+    CalendarFreeHoursComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +81,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DepartmentsPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
-    ServicesPage
+    ServicesPage,
+    DoctorBookingPage,
+    CalendarComponent,
+    CalendarFreeHoursComponent
   ],
   providers: [
     StatusBar,

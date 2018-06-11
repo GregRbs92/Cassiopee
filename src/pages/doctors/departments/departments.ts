@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DoctorDataProvider } from '../../providers/doctor-data/doctor-data';
+import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 import { ListDoctorsPage } from '../list-doctors/list-doctors';
 
 /**
