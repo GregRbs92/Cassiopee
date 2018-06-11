@@ -1,6 +1,6 @@
 {
   "TABS": {
-    "HOME": "Accueil"
+    "HOME": "Accueil",
     "SERVICES": "Services",
     "APPOINTMENTS": "Rendez-vous",
     "ACCOUNT": "Compte"
@@ -42,6 +42,10 @@
     "TITLE": "Spécialités",
     "INPUT_PLACEHOLDER": "Rechercher une spécialité"
   },
+  "INTERPRETERS": {
+    "TITLE": "Langue",
+    "INPUT_PLACEHOLDER": "Rechercher une langue"
+  },
   "LIST_DOCTORS": {
     "TITLE": "Rechercher un docteur",
     "NO_SPECIALITY": "Veuillez sélectionner une spécialité.",
@@ -69,5 +73,16 @@
     "TEXT": "Nous avons juste besoin de votre e-mail renseigné lors de l'inscription pour vous envoyer le lien de réinitialisation.",
     "PLACEHOLDER": "E-mail",
     "BUTTON": "Réinitialiser le mot de passe"
+  },
+  "USER": {
+    "ACCOUNT": "Mon compte",
+    "PROFILE": "Profil",
+    "INFOS": "Informations de base",
+    "CHANGEPASS": "Changer le mot de passe",
+    "SETTINGS": "Paramètres",
+    "LEGAL": "Informations légales",
+    "COMMENTS": "Envoyer des commentaires",
+    "CO": "Connexion",
+    "DECO": "Déconnexion"
   }
 }

@@ -1,25 +1,26 @@
 <ion-content>
 
-<header>
-  <h1>Mon compte</h1>
-</header>
+  <header>
+    <ion-icon name="person"></ion-icon>
+    <span>{{ 'USER.ACCOUNT' | translate }}</span>
+  </header>
 
-<h2>Profil</h2>
+  <h2>{{ 'USER.PROFILE' | translate }}</h2>
 
-<ul>
-  <li>Informations de base</li>
-  <li>Changer le mot de passe</li>
-  <li>Paramètres</li>
-</ul>
+  <ul>
+    <li>{{ 'USER.INFOS' | translate }}</li>
+    <li>{{ 'USER.CHANGEPASS' | translate }}</li>
+    <li>{{ 'USER.SETTINGS' | translate }}</li>
+  </ul>
 
-<ul>
-  <li>Informations légales</li>
-  <li>Envoyer des commentaires</li>
-</ul>
+  <ul>
+    <li>{{ 'USER.LEGAL' | translate }}</li>
+    <li>{{ 'USER.COMMENTS' | translate }}</li>
+  </ul>
 
-<ul>
-  <li *ngIf="!isLoggedIn" (click)="goToLoginPage()">Connexion</li>
-  <li *ngIf="isLoggedIn" (click)="logout()">Déconnexion</li>
-</ul>
+  <ul>
+    <li *ngIf="!isLoggedIn" (click)="goToLoginPage()">{{ 'USER.CO' | translate }}</li>
+    <li *ngIf="isLoggedIn" (click)="logout()">{{ 'USER.DECO' | translate }}</li>
+  </ul>
 
 </ion-content>

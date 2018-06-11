@@ -42,6 +42,10 @@
     "TITLE": "Specialities",
     "INPUT_PLACEHOLDER": "Search for a speciality"
   },
+  "INTERPRETERS": {
+    "TITLE": "Language",
+    "INPUT_PLACEHOLDER": "Search for a language"
+  },
   "LIST_DOCTORS": {
     "TITLE": "Search for a doctor",
     "NO_SPECIALITY": "Select a speciality.",
@@ -69,5 +73,16 @@
     "TEXT": "We only need the email you gave us when you registered to send you the reset link.",
     "PLACEHOLDER": "Email",
     "BUTTON": "Reset password"
+  },
+  "USER": {
+    "ACCOUNT": "My account",
+    "PROFILE": "Profile",
+    "INFOS": "Basic information",
+    "CHANGEPASS": "Change password",
+    "SETTINGS": "Settings",
+    "LEGAL": "Legal information",
+    "COMMENTS": "Send feedback",
+    "CO": "Log in",
+    "DECO": "Sign out"
   }
 }
