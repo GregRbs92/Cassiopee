@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DepartmentsPage } from '../doctors/departments/departments';
 import { LanguesPage } from '../interpreters/langues/langues';
+import { CommentsPage } from '../comments/comments';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -28,6 +29,10 @@ export class HomePage {
 
   goToLangues() {
     this.navCtrl.push(LanguesPage);
+  }
+
+  goToComments() {
+    this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(3)).then(res => this.navCtrl.push(CommentsPage));
   }
 
   onSubmit(last, first, email, message) {

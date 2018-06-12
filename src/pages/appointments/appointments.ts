@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DepartmentsPage } from '../doctors/departments/departments';
 import { LanguesPage } from '../interpreters/langues/langues';
-import { ServicesPage } from '../services/services';
 
 @Component({
   selector: 'page-appointments',
@@ -31,7 +30,8 @@ export class AppointmentsPage {
   }
 
   goToServices() {
-    this.navCtrl.push(ServicesPage);
+    //this.navCtrl.push(ServicesPage);
+    this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(1));
   }
 
   

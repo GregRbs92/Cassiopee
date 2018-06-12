@@ -2,8 +2,8 @@
   "TABS": {
     "HOME": "Accueil",
     "SERVICES": "Services",
-    "APPOINTMENTS": "Rendez-vous",
-    "ACCOUNT": "Compte"
+    "APPOINTMENTS": "Mes rendez-vous",
+    "ACCOUNT": "Mon compte"
   },
   "HOME" : {
     "HEADER": {
@@ -27,7 +27,7 @@
     "INTERPRETERS": "Interprètes",
     "HOTELS": "Logements",
     "TAXIS": "Transports",
-    "NURSES": "Infirmiers / Infirmières"
+    "NURSES": "Infirmières & Infirmiers"
   },
   "LOGIN": {
     "LOGIN": "Se connecter",
@@ -103,6 +103,9 @@
   },
   "LEGAL": {
     "INFO": "Informations légales",
-    "DESCRIPTION": "ITMP est une application pensée et conçue pour le tourisme médical, destinée à aider les étrangers arrivant en France dans leurs démarches, aussi bien auprès des médecins que des services adjacents tels que l'hébergement, les transports ou les interprètes."
+    "DESCRIPTION": "ITMP est une application pensée et conçue pour le tourisme médical, destinée à aider les étrangers arrivant en France dans leurs démarches, aussi bien auprès des médecins que des services adjacents tels que l'hébergement, les transports ou les interprètes.",
+    "ADDRESS": "Pour tous renseignements, adressez-vous à :",
+    "RENS": "RENSEIGNEMENTS COMPLÉMENTAIRES",
+    "RIGHTS": "Tous droits réservés"
   }
 }

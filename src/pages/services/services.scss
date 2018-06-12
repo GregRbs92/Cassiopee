@@ -15,6 +15,7 @@ page-services {
       margin-bottom: 10px;
       background-position: center center;
       background-size: cover;
+      border-radius: 5px 5px 5px 5px;
       .black-veil {
         display: flex;
         justify-content: center;
@@ -22,10 +23,11 @@ page-services {
         padding: 15px;
         height: 100%;
         width: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 5px 5px 5px 5px;
         label {
           color: #fff;
-          font-size: 1.4em;
+          font-size: 2em;
           letter-spacing: 1px;
           text-shadow: 1px 1px 7px #000;
         }

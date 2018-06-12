@@ -37,6 +37,27 @@ page-home {
       background-color: rgba(0, 0, 0, 0.4);
     }
 
+    #bouton {
+      position: fixed;
+      left: 0;
+      bottom: 50px;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      button {
+        width: 100%;
+        padding: 13px;
+        background-color: #3acfd5;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 3px;
+        box-shadow: 0px 2px 7px #999;
+      }
+    }
+
     #contact {
       padding: 20px;
       h1 {

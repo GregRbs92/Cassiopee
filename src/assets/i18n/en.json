@@ -2,8 +2,8 @@
   "TABS": {
     "HOME": "Home",
     "SERVICES": "Services",
-    "APPOINTMENTS": "Appointments",
-    "ACCOUNT": "Account"
+    "APPOINTMENTS": "My appointments",
+    "ACCOUNT": "My account"
   },
   "HOME" : {
     "HEADER": {
@@ -103,6 +103,9 @@
   },
   "LEGAL": {
     "INFO": "Informations légales",
-    "DESCRIPTION": "ITMP is an app designed for medical tourism, intended to help foreigners arriving in France in their efforts, both with doctors and adjacent services such as accommodation, transportation or interpreters."
+    "DESCRIPTION": "ITMP is an app designed for medical tourism, intended to help foreigners arriving in France in their efforts, both with doctors and adjacent services such as accommodation, transportation or interpreters.",
+    "ADDRESS": "For any information, please contact:",
+    "RENS": "FURTHER INFORMATION",
+    "RIGHTS": "All rights reserved"
   }
 }
