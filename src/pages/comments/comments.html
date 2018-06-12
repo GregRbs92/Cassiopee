@@ -1,0 +1,24 @@
+<ion-content>
+
+  <header>
+    <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+    <span>{{ 'USER.COMMENTS' | translate }}</span>
+  </header>
+
+  <h2>{{ 'HOME.CONTACT_US' | translate }}</h2>
+
+  <section id="contact">
+    <form (submit)="onSubmit(nom.value, prenom.value, mail.value, message.value)">
+      <p *ngIf="sendingError" class="error">{{ sendingError }}</p>
+      <p *ngIf="sendingSuccess" class="success">{{ sendingSuccess }}</p>
+      <div>
+        <input type="text" placeholder="{{ 'HOME.FORM.LAST_NAME' | translate }}" spellcheck="false" required #nom>
+        <input type="text" placeholder="{{ 'HOME.FORM.FIRST_NAME' | translate }}" spellcheck="false" required #prenom>
+      </div>
+      <input type="email" placeholder="{{ 'HOME.FORM.EMAIL' | translate }}" spellcheck="false" required #mail>
+      <textarea placeholder="{{ 'HOME.FORM.MESSAGE' | translate }}" spellcheck="false" required #message></textarea>
+      <button type="submit">{{ 'HOME.FORM.SEND' | translate }}</button>
+    </form>
+  </section>
+
+</ion-content>

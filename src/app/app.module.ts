@@ -25,6 +25,8 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { LoginPage } from '../pages/login/login';
+import { LegalPage } from '../pages/legal/legal';
+import { CommentsPage } from '../pages/comments/comments';
 import { ListDoctorsPage } from '../pages/doctors/list-doctors/list-doctors';
 import { ListInterpretersPage } from '../pages/interpreters/list-interpreters/list-interpreters';
 import { DepartmentsPage } from '../pages/doctors/departments/departments';
@@ -48,6 +50,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
+    LegalPage,
+    CommentsPage,
     ListDoctorsPage,
     ListInterpretersPage,
     DepartmentsPage,
@@ -82,6 +86,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
+    LegalPage,
+    CommentsPage,
     ListDoctorsPage,
     ListInterpretersPage,
     DepartmentsPage,

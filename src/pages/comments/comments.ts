@@ -1,0 +1,47 @@
+import { Component } from '@angular/core';
+import { NavController, NavParams } from 'ionic-angular';
+import { HttpClient } from '@angular/common/http';
+
+/**
+ * Generated class for the CommentsPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@Component({
+  selector: 'page-comments',
+  templateUrl: 'comments.html',
+})
+export class CommentsPage {
+
+  sendingError:string;
+  sendingSuccess: string;
+  sending:boolean = false;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private http: HttpClient) {
+  }
+
+  goBack() {
+    this.navCtrl.pop();
+  }
+
+  onSubmit(last, first, email, message) {
+    if (last === "" || first === "" || email === "" || message === "") {
+      this.sendingError = "Veuillez renseigner tous les champs.";
+      return;
+    }
+    if (!this.sending) {
+      this.sendingSuccess = "";
+      this.sendingError = "";
+      this.sending = true;
+      this.http.post(`http://localhost:8000/clients/send-contact-email`, {nom: last, prenom: first, email: email, message: message}).subscribe(() => {
+        this.sendingSuccess = "Votre message a bien été envoyé";
+        this.sending = false;
+      }, err => {
+        this.sendingError = err.message;
+      });
+    }
+  }
+
+}

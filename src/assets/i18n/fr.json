@@ -79,6 +79,9 @@
     "APPOINTMENT": "PRENDRE RENDEZ-VOUS",
     "NO_FEEDBACK": "Aucun avis pour le moment"
   },
+  "BOOK_DOCTOR": {
+    "TITLE": "Prendre rendez-vous"
+  },
   "FORGOTTEN_PASSWORD": {
     "FORGOTTEN_PASSWORD": "Mot de passe oublié",
     "TEXT": "Nous avons juste besoin de votre e-mail renseigné lors de l'inscription pour vous envoyer le lien de réinitialisation.",
@@ -95,5 +98,9 @@
     "COMMENTS": "Envoyer des commentaires",
     "CO": "Connexion",
     "DECO": "Déconnexion"
+  },
+  "LEGAL": {
+    "INFO": "Informations légales",
+    "DESCRIPTION": "ITMP est une application pensée et conçue pour le tourisme médical, destinée à aider les étrangers arrivant en France dans leurs démarches, aussi bien auprès des médecins que des services adjacents tels que l'hébergement, les transports ou les interprètes."
   }
 }}
