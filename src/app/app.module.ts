@@ -33,6 +33,7 @@ import { DoctorBookingPage } from '../pages/doctors/doctor-booking/doctor-bookin
 
 import { CalendarComponent } from '../components/calendar/calendar.component';
 import { CalendarFreeHoursComponent } from '../components/calendar-free-hours/calendar-free-hours.component';
+import { LanguesPage } from '../pages/interpreters/langues/langues';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -47,6 +48,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginPage,
     ListDoctorsPage,
     DepartmentsPage,
+    LanguesPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
     ServicesPage,
@@ -79,6 +81,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LoginPage,
     ListDoctorsPage,
     DepartmentsPage,
+    LanguesPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
     ServicesPage,

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DepartmentsPage } from '../doctors/departments/departments';
+import { LanguesPage } from '../interpreters/langues/langues';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
@@ -23,6 +24,10 @@ export class HomePage {
 
   goToDepartments() {
     this.navCtrl.push(DepartmentsPage);
+  }
+
+  goToLangues() {
+    this.navCtrl.push(LanguesPage);
   }
 
   onSubmit(last, first, email, message) {

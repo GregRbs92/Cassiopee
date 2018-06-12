@@ -43,6 +43,11 @@
     "TITLE": "Départements",
     "INPUT_PLACEHOLDER": "Rechercher une spécialité"
   },
+
+    "INTERPRETERS": {
+    "TITLE": "Langues",
+    "INPUT_PLACEHOLDER": "Rechercher une langue"
+  },
   "LIST_DOCTORS": {
     "TITLE": "Rechercher un docteur",
     "NO_SPECIALITY": "Veuillez sélectionner une spécialité.",
