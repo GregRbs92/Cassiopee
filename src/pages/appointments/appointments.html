@@ -1,0 +1,13 @@
+<ion-content id="container">
+
+  <h1>{{ 'HOME.YOUR_APPOINTMENTS' | translate }}</h1>
+
+  <section id="appointments">
+    <p class="no-appointments" *ngIf="appointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
+  </section>
+
+  <div id="appointment" (click)="goToServices()">
+    <button>{{ 'SHOW_DOCTOR.APP' | translate }}</button>
+  </div>
+  
+</ion-content>

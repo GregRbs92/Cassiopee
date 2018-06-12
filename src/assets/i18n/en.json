@@ -58,6 +58,18 @@
       "LOCATE_ME": "Geolocate me"
     }
   },
+  "LIST_INTERPRETERS": {
+    "TITLE": "Search for interpreter",
+    "NO_SPECIALITY": "Select a language.",
+    "NO_LOCATION": "Select a location.",
+    "AROUND_ME": "Around me",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "Search for an address",
+      "SEARCH": "Search",
+      "OR": "OR",
+      "LOCATE_ME": "Geolocate me"
+    }
+  },
   "SHOW_DOCTOR": {
     "TITLE": "Doctor profile",
     "EXPERIENCE": "{{ years }} years of experience",
@@ -66,6 +78,7 @@
     "RDV": "CONSULTATIONS",
     "FEEDBACKS": "FEEDBACKS",
     "APPOINTMENT": "MAKE AN APPOINTMENT",
+    "APP": "Make an appointment",
     "NO_FEEDBACK": "No feedbacks for now"
   },
   "BOOK_DOCTOR": {

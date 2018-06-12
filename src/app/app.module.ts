@@ -33,6 +33,7 @@ import { DepartmentsPage } from '../pages/doctors/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
 import { ShowDoctorPage } from '../pages/doctors/show-doctor/show-doctor';
 import { ServicesPage } from '../pages/services/services';
+import { AppointmentsPage } from '../pages/appointments/appointments';
 import { DoctorBookingPage } from '../pages/doctors/doctor-booking/doctor-booking';
 
 import { CalendarComponent } from '../components/calendar/calendar.component';
@@ -59,6 +60,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ForgottenPasswordPage,
     ShowDoctorPage,
     ServicesPage,
+    AppointmentsPage,
     DoctorBookingPage,
     CalendarComponent,
     CalendarFreeHoursComponent
@@ -95,6 +97,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     ForgottenPasswordPage,
     ShowDoctorPage,
     ServicesPage,
+    AppointmentsPage,
     DoctorBookingPage,
     CalendarComponent,
     CalendarFreeHoursComponent

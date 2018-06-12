@@ -58,6 +58,18 @@
       "LOCATE_ME": "تحديد الموقع الجغرافي لي"
     }
   },
+  "LIST_INTERPRETERS": {
+    "TITLE": "ابحث عن مترجم",
+    "NO_SPECIALITY": ".يرجى اختيار لغة",
+    "NO_LOCATION": ".يرجى ملء المكان",
+    "AROUND_ME": "حولي",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "ابحث عن عنوان",
+      "SEARCH": "بحث",
+      "OR": "أو",
+      "LOCATE_ME": "تحديد الموقع الجغرافي لي"
+    }
+  },
   "SHOW_DOCTOR": {
     "TITLE": "الملف الشخصي للطبيب",
     "EXPERIENCE": "{{years}} من سنوات الخبرة",
@@ -66,6 +78,7 @@
     "RDV": "المشاورات",
     "FEEDBACKS": "إشعار",
     "APPOINTMENT": "تحديد موعد",
+    "APP": "تحديد موعد",
     "NO_FEEDBACK": "لا يوجد تقييم في الوقت الحالي"
   },
   "BOOK_DOCTOR": {

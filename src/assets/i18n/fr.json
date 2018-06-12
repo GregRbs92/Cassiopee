@@ -56,18 +56,19 @@
       "SEARCH": "Rechercher",
       "OR": "OU",
       "LOCATE_ME": "Me géolocaliser"
-    },
-    "LIST_INTERPRETERS": {
-      "TITLE": "Rechercher un interprèe",
-      "NO_SPECIALITY": "Veuillez sélectionner une langue.",
-      "NO_LOCATION": "Veuillez renseigner le lieu.",
-      "AROUND_ME": "Autour de moi",
-      "MODAL": {
-        "INPUT_PLACEHOLDER": "Rechercher une adresse",
-        "SEARCH": "Rechercher",
-        "OR": "OU",
-        "LOCATE_ME": "Me géolocaliser"
-      }
+    }
+  },
+  "LIST_INTERPRETERS": {
+    "TITLE": "Rechercher un interprète",
+    "NO_SPECIALITY": "Veuillez sélectionner une langue.",
+    "NO_LOCATION": "Veuillez renseigner le lieu.",
+    "AROUND_ME": "Autour de moi",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "Rechercher une adresse",
+      "SEARCH": "Rechercher",
+      "OR": "OU",
+      "LOCATE_ME": "Me géolocaliser"
+    }
   },
   "SHOW_DOCTOR": {
     "TITLE": "Profil du docteur",
@@ -77,6 +78,7 @@
     "RDV": "CONSULTATIONS",
     "FEEDBACKS": "AVIS",
     "APPOINTMENT": "PRENDRE RENDEZ-VOUS",
+    "APP": "Prendre rendez-vous",
     "NO_FEEDBACK": "Aucun avis pour le moment"
   },
   "BOOK_DOCTOR": {
@@ -103,4 +105,4 @@
     "INFO": "Informations légales",
     "DESCRIPTION": "ITMP est une application pensée et conçue pour le tourisme médical, destinée à aider les étrangers arrivant en France dans leurs démarches, aussi bien auprès des médecins que des services adjacents tels que l'hébergement, les transports ou les interprètes."
   }
-}}
+}
