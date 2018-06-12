@@ -56,7 +56,18 @@
       "SEARCH": "Rechercher",
       "OR": "OU",
       "LOCATE_ME": "Me géolocaliser"
-    }
+    },
+    "LIST_INTERPRETERS": {
+      "TITLE": "Rechercher un interprèe",
+      "NO_SPECIALITY": "Veuillez sélectionner une langue.",
+      "NO_LOCATION": "Veuillez renseigner le lieu.",
+      "AROUND_ME": "Autour de moi",
+      "MODAL": {
+        "INPUT_PLACEHOLDER": "Rechercher une adresse",
+        "SEARCH": "Rechercher",
+        "OR": "OU",
+        "LOCATE_ME": "Me géolocaliser"
+      }
   },
   "SHOW_DOCTOR": {
     "TITLE": "Profil du docteur",
@@ -85,4 +96,4 @@
     "CO": "Connexion",
     "DECO": "Déconnexion"
   }
-}
+}}

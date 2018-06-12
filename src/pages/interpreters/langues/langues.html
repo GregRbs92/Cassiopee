@@ -8,7 +8,7 @@
       <input type="text" placeholder="{{ 'INTERPRETERS.INPUT_PLACEHOLDER' | translate }}" (input)="filter($event)">
     </div>
     <div id="langues">
-      <div class="langues" *ngFor="let l of langues" style="background-image: url('assets/imgs/homepage/paris.jpg')" (click)="goToDoctorsList(d[0])">
+      <div class="langues" *ngFor="let l of langues" style="background-image: url('assets/imgs/homepage/paris.jpg')" (click)="goToInterpretersList(l[0])">
         <label>{{ l[1] }}</label>
       </div>
     </div>

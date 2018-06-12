@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
-import { ListDoctorsPage } from '../../doctors/list-doctors/list-doctors';
+import { InterpreterDataProvider } from '../../../providers/interpreter-data/interpreter-data';
+import { ListInterpretersPage } from '../../interpreters/list-interpreters/list-interpreters';
 
 /**
  * Generated class for the LanguesPage page.
@@ -20,11 +20,11 @@ export class LanguesPage implements OnInit {
 
   langues: any[];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private docProvider: DoctorDataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private docProvider: InterpreterDataProvider) {
   }
 
   ngOnInit() {
-    this.docProvider.getSpecialities().subscribe(val => {
+    this.docProvider.getLangues().subscribe(val => {
       this.langues = val;
       langues = val;
     });
@@ -41,7 +41,7 @@ export class LanguesPage implements OnInit {
     });
   }
 
-  goToDoctorsList(specialityId: number) {
-    this.navCtrl.push(ListDoctorsPage, {'specialityId': specialityId});
+  goToInterpretersList(specialityId: number) {
+    this.navCtrl.push(ListInterpretersPage, {'specialityId': specialityId});
   }
 }

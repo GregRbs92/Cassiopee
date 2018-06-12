@@ -18,6 +18,7 @@ import { NativeGeocoder } from '@ionic-native/native-geocoder';
 
 import { AuthServiceProvider } from '../providers/auth-service/auth-service';
 import { DoctorDataProvider } from '../providers/doctor-data/doctor-data';
+import { InterpreterDataProvider } from '../providers/interpreter-data/interpreter-data';
 
 import { ComponentsModule } from '../components/components.module';
 import { HomePage } from '../pages/home/home';
@@ -25,6 +26,7 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { LoginPage } from '../pages/login/login';
 import { ListDoctorsPage } from '../pages/doctors/list-doctors/list-doctors';
+import { ListInterpretersPage } from '../pages/interpreters/list-interpreters/list-interpreters';
 import { DepartmentsPage } from '../pages/doctors/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
 import { ShowDoctorPage } from '../pages/doctors/show-doctor/show-doctor';
@@ -47,6 +49,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserPage,
     LoginPage,
     ListDoctorsPage,
+    ListInterpretersPage,
     DepartmentsPage,
     LanguesPage,
     ForgottenPasswordPage,
@@ -80,6 +83,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     UserPage,
     LoginPage,
     ListDoctorsPage,
+    ListInterpretersPage,
     DepartmentsPage,
     LanguesPage,
     ForgottenPasswordPage,
@@ -95,6 +99,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthServiceProvider,
     DoctorDataProvider,
+    InterpreterDataProvider,
     Geolocation,
     NativeGeocoder
   ]

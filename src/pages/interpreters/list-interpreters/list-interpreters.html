@@ -1,0 +1,43 @@
+<ion-content>
+    <header>
+      <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+      <span>{{ 'LIST_INTERPRETERS.TITLE' | translate }}</span>
+    </header>
+  
+    <div id="location" (click)="toggleModal()">
+      <ion-icon name="pin"></ion-icon>
+      <span>{{ location | uppercase}}</span>
+    </div>
+  
+    <p class="loader" *ngIf="loading"><ion-spinner></ion-spinner></p>
+  
+    <p *ngIf="interpreters && interpreters.length == 0"><em>Aucun interprete ne correspond à votre recherche.</em></p>
+  
+    <section id="interpreters-list">
+      <div class="interpreter" *ngFor="let i of interpreters" (click)="showDoctor(i.id)">
+        <div class="interpreter-photo">
+          <div *ngIf="i.photo && i.photo != ''" class="photo-container"></div>
+          <ion-icon *ngIf="!i.photo || i.photo == ''" name="contact"></ion-icon>
+        </div>
+        <div class="interpreter-infos">
+          <p class="name">{{ i.nom | uppercase }} {{ i.prenom }}</p>
+          <p>{{ i.adresse }}</p>
+        </div>
+        <div class="interpreter-distance">
+          <p>{{ i.distance }}km</p>
+        </div>
+      </div>
+    </section>
+  
+  
+    <div id="modal" *ngIf="isModalOpen">
+      <ion-icon name="close" (click)="toggleModal()"></ion-icon>
+      <div>
+        <input type="text" placeholder="{{ 'LIST_INTERPRETES.MODAL.INPUT_PLACEHOLDER' | translate }}" #input>
+        <button type="button" (click)="searchInterpreters(input.value)" (click)="toggleModal()">{{ 'LIST_INTERPRETES.MODAL.SEARCH' | translate }}</button>
+        <p>{{ 'LIST_INTERPRETES.MODAL.OR' | translate }}</p>
+        <button type="button" (click)="searchInterpretersAroundMe()" (click)="toggleModal()"><ion-icon name="pin"></ion-icon> {{ 'LIST_INTERPRETES.MODAL.LOCATE_ME' | translate }}</button>
+      </div>
+    </div>
+  </ion-content>
+²  
