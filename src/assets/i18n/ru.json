@@ -1,26 +1,88 @@
 {
-  "HOME" : {
-    "CATCH_PHRASE": "Записаться на прием к врачу",
-    "SPECIALITY_FIELD": "специальность",
-    "LOCATION_FIELD": "место",
-    "BUTTON_SEARCH": "поиск",
-    "CHOOSE_LANG": "выберите язык",
-    "MEDICAL_ASSISTANCE": "медицинская помощь",
-    "DOCTOR": "врач",
-    "NURSE": "медсестра",
-    "DRUGSTORE": "аптека",
-    "ACCOMODATION": "жилье",
-    "HOTEL": "Гостиница",
-    "MOTEL": "мотель",
-    "APARTMENT": "квартира",
-    "TRANSLATOR": "интерпретировать",
-    "ENGLISH": "английский",
-    "RUSSIAN": "русский",
-    "ARABIC": "арабский",
+  "TABS": {
+    "HOME": "добро пожаловать",
     "SERVICES": "услуги",
-    "TRANSPORT": "транспорт",
-    "FOOD": "питание",
-    "CLEANING": "уборка",
-    "SHOW_MORE": "показать больше"
+    "APPOINTMENTS": "Назначение",
+    "ACCOUNT": "счет"
+  },
+  "HOME" : {
+    "HEADER": {
+      "CATCH_PHRASE": "Как мы можем помочь вам СЕГОДНЯ?",
+      "BUTTON": "Задайте бесплатный вопрос"
+    },
+    "YOUR_APPOINTMENTS": "Ваши встречи",
+    "NO_APPOINTMENTS": "Нет назначений еще",
+    "CONTACT_US": "Как с нами связаться",
+    "FORM": {
+      "LAST_NAME": "Фамилия",
+      "FIRST_NAME": "имя",
+      "EMAIL": "электронная почта",
+      "MESSAGE": "Ваше сообщение...",
+      "SEND": "послать"
+    }
+  },
+  "SERVICES": {
+    "TITLE": "Наши услуги",
+    "DOCTORS": "врачи",
+    "INTERPRETERS": "переводчики",
+    "HOTELS": "корпус",
+    "TAXIS": "транспортная сеть",
+    "NURSES": "медсестры"
+  },
+  "LOGIN": {
+    "LOGIN": "войти",
+    "EMAIL": "электронная почта",
+    "PASSWORD": "пароль",
+    "FORGOTTEN_PASSWORD": "Забыли пароль?",
+    "OR": "ИЛИ",
+    "NO_ACCOUNT": "У вас нет учетной записи?",
+    "CREATE_ACCOUNT": "Создайте учетную запись."
+  },
+  "DEPARTMENTS": {
+    "TITLE": "специальности",
+    "INPUT_PLACEHOLDER": "Поиск специальности"
+  },
+  "INTERPRETERS": {
+    "TITLE": "язык",
+    "INPUT_PLACEHOLDER": "Найти язык"
+  },
+  "LIST_DOCTORS": {
+    "TITLE": "Найти врача",
+    "NO_SPECIALITY": "Выберите специальность.",
+    "NO_LOCATION": "Пожалуйста, заполните это место.",
+    "AROUND_ME": "Вокруг меня",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "Найти адрес",
+      "SEARCH": "поиск",
+      "OR": "ИЛИ",
+      "LOCATE_ME": "Геолокация меня"
+    }
+  },
+  "SHOW_DOCTOR": {
+    "TITLE": "Профиль врача",
+    "EXPERIENCE": "{{ years }} лет опыта",
+    "LOCATION": "РАСПОЛОЖЕНИЕ",
+    "SKILLS": "СПЕЦИАЛИЗАЦИИ",
+    "RDV": "КОНСУЛЬТАЦИИ",
+    "FEEDBACKS": "Обратная связь",
+    "APPOINTMENT": "СДЕЛАЙТЕ НАЗНАЧЕНИЕ",
+    "NO_FEEDBACK": "Нет отзывов на данный момент"
+  },
+  "FORGOTTEN_PASSWORD": {
+    "FORGOTTEN_PASSWORD": "Забыли пароль",
+    "TEXT": "Нам просто нужна ваша электронная почта, заполненная во время регистрации, чтобы отправить вам ссылку на сброс.",
+    "PLACEHOLDER": "электронная почта",
+    "BUTTON": "Сбросить пароль"
+  },
+  "USER": {
+    "ACCOUNT": "Моя учетная запись",
+    "PROFILE": "профиль",
+    "INFOS": "Основная информация",
+    "CHANGEPASS": "Изменить пароль",
+    "SETTINGS": "настройки",
+    "LEGAL": "Юридическая информация",
+    "COMMENTS": "Отправить отзыв",
+    "CO": "войти",
+    "DECO": "Выход из системы"
   }
 }

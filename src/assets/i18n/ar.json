@@ -1,26 +1,88 @@
 {
-  "HOME" : {
-    "CATCH_PHRASE": "أخذ موعد مع طبيب محترف",
-    "SPECIALITY_FIELD": "تخصص",
-    "LOCATION_FIELD": "موقعك",
-    "BUTTON_SEARCH": "بحث",
-    "CHOOSE_LANG": "اختر لغتك",
-    "MEDICAL_ASSISTANCE": "المساعدة الطبية",
-    "DOCTOR": "طبيب",
-    "NURSE": "ممرضة",
-    "DRUGSTORE": "صيدلية",
-    "ACCOMODATION": "الإقامة",
-    "HOTEL": "فندق",
-    "MOTEL": "فندق صغير",
-    "APARTMENT": "شقة",
-    "TRANSLATOR": "مترجم",
-    "ENGLISH": "الإنجليزية",
-    "RUSSIAN": "الروسية",
-    "ARABIC": "العربية",
+  "TABS": {
+    "HOME": "ترحيب",
     "SERVICES": "الخدمات",
-    "TRANSPORT": "نقل",
-    "FOOD": "طعام",
-    "CLEANING": "منزلي",
-    "SHOW_MORE": "أظهر المزيد"
+    "APPOINTMENTS": "موعد",
+    "ACCOUNT": "حساب"
+  },
+  "HOME" : {
+    "HEADER": {
+      "CATCH_PHRASE": "كيف يمكننا مساعدتك اليوم؟",
+      "BUTTON": "طرح سؤال مجاني"
+    },
+    "YOUR_APPOINTMENTS": "المواعيد الخاصة بك",
+    "NO_APPOINTMENTS": "لا مواعيد حتى الآن",
+    "CONTACT_US": "اتصل بنا",
+    "FORM": {
+      "LAST_NAME": "اسم العائلة",
+      "FIRST_NAME": "الأسم الأول",
+      "EMAIL": "البريد الإلكتروني",
+      "MESSAGE": "...رسالتك",
+      "SEND": "إرسال"
+    }
+  },
+  "SERVICES": {
+    "TITLE": "خدماتنا",
+    "DOCTORS": "الأطباء",
+    "INTERPRETERS": "مترجمين",
+    "HOTELS": "إسكان",
+    "TAXIS": "شبكة النقل",
+    "NURSES": "الممرضات"
+  },
+  "LOGIN": {
+    "LOGIN": "يتصل",
+    "EMAIL": "البريد الإلكتروني",
+    "PASSWORD": "كلمة السر",
+    "FORGOTTEN_PASSWORD": "هل نسيت كلمة المرور؟",
+    "OR": "أو",
+    "NO_ACCOUNT": "لا تملك حساب؟",
+    "CREATE_ACCOUNT": ".قم بإنشاء حساب"
+  },
+  "DEPARTMENTS": {
+    "TITLE": "التخصصات الطبية",
+    "INPUT_PLACEHOLDER": "بحث تخصص"
+  },
+  "INTERPRETERS": {
+    "TITLE": "لغة",
+    "INPUT_PLACEHOLDER": "ابحث عن لغة"
+  },
+  "LIST_DOCTORS": {
+    "TITLE": "ابحث عن طبيب",
+    "NO_SPECIALITY": ".يرجى اختيار التخصص",
+    "NO_LOCATION": ".يرجى ملء المكان",
+    "AROUND_ME": "حولي",
+    "MODAL": {
+      "INPUT_PLACEHOLDER": "ابحث عن عنوان",
+      "SEARCH": "بحث",
+      "OR": "أو",
+      "LOCATE_ME": "تحديد الموقع الجغرافي لي"
+    }
+  },
+  "SHOW_DOCTOR": {
+    "TITLE": "الملف الشخصي للطبيب",
+    "EXPERIENCE": "{{years}} من سنوات الخبرة",
+    "LOCATION": "الموقع",
+    "SKILLS": "مهارات",
+    "RDV": "المشاورات",
+    "FEEDBACKS": "إشعار",
+    "APPOINTMENT": "تحديد موعد",
+    "NO_FEEDBACK": "لا يوجد تقييم في الوقت الحالي"
+  },
+  "FORGOTTEN_PASSWORD": {
+    "FORGOTTEN_PASSWORD": "كلمة المرور",
+    "TEXT": ".نحتاج فقط إلى ملء بريدك الإلكتروني أثناء التسجيل لإرسال رابط إعادة التعيين إليك",
+    "PLACEHOLDER": "البريد الإلكتروني",
+    "BUTTON": "إعادة تعيين كلمة المرور"
+  },
+  "USER": {
+    "ACCOUNT": "حسابي",
+    "PROFILE": "البيانات الشخصية",
+    "INFOS": "المعلومات الأساسية",
+    "CHANGEPASS": "تغيير كلمة المرور",
+    "SETTINGS": "إعدادات",
+    "LEGAL": "المعلومات القانونية",
+    "COMMENTS": "ارسال تعليقات",
+    "CO": "تسجيل الدخول",
+    "DECO": "تسجيل الخروج"
   }
 }

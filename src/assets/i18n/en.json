@@ -25,7 +25,7 @@
     "TITLE": "Our services",
     "DOCTORS": "Doctors",
     "INTERPRETERS": "Interpreters",
-    "HOTELS": "Hotels",
+    "HOTELS": "Transport",
     "TAXIS": "Taxis",
     "NURSES": "Nurses"
   },
@@ -33,14 +33,18 @@
     "LOGIN": "Log in",
     "EMAIL": "Email",
     "PASSWORD": "Password",
-    "FORGOTTEN_PASSWORD": "Forgotten password ?",
+    "FORGOTTEN_PASSWORD": "Forgotten password?",
     "OR": "OR",
-    "NO_ACCOUNT": "No account ?",
+    "NO_ACCOUNT": "No account?",
     "CREATE_ACCOUNT": "Create an account."
   },
   "DEPARTMENTS": {
-    "TITLE": "Departments",
+    "TITLE": "Specialities",
     "INPUT_PLACEHOLDER": "Search for a speciality"
+  },
+  "INTERPRETERS": {
+    "TITLE": "Language",
+    "INPUT_PLACEHOLDER": "Search for a language"
   },
   "LIST_DOCTORS": {
     "TITLE": "Search for a doctor",
@@ -59,14 +63,26 @@
     "EXPERIENCE": "{{ years }} years of experience",
     "LOCATION": "LOCATION",
     "SKILLS": "SKILLS",
+    "RDV": "CONSULTATIONS",
     "FEEDBACKS": "FEEDBACKS",
-    "APPOINTMENT": "BOOK AN APPOINTMENT",
+    "APPOINTMENT": "MAKE AN APPOINTMENT",
     "NO_FEEDBACK": "No feedbacks for now"
   },
   "FORGOTTEN_PASSWORD": {
     "FORGOTTEN_PASSWORD": "Forgotten password",
-    "TEXT": "We only need the email you gave us when you registered to send you the link.",
+    "TEXT": "We only need the email you gave us when you registered to send you the reset link.",
     "PLACEHOLDER": "Email",
-    "BUTTON": "Reinitialize your password"
+    "BUTTON": "Reset password"
+  },
+  "USER": {
+    "ACCOUNT": "My account",
+    "PROFILE": "Profile",
+    "INFOS": "Basic information",
+    "CHANGEPASS": "Change password",
+    "SETTINGS": "Settings",
+    "LEGAL": "Legal information",
+    "COMMENTS": "Send feedback",
+    "CO": "Log in",
+    "DECO": "Sign out"
   }
 }
