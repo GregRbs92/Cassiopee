@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoginPage } from '../login/login';
+import { LegalPage } from '../legal/legal';
 
 /**
  * Generated class for the UserPage page.
@@ -27,6 +28,10 @@ export class UserPage {
         this.isLoggedIn = true;
       }
     });
+  }
+
+  goToLegalPage() {
+    this.navCtrl.push(LegalPage);
   }
 
   goToLoginPage() {

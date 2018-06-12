@@ -1,6 +1,6 @@
-# Jasmine
+# ITMP
 
-*Jasmine* est une application pensée et conçue pour le tourisme médical,
+*ITMP* est une application pensée et conçue pour le tourisme médical,
 destinée à aider les étrangers arrivant en France dans leurs démarches,
 aussi bien auprès des médecins que des services adjacents tels que
 l'hébergement, les transports ou les interprètes.

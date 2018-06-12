@@ -24,6 +24,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { UserPage } from '../pages/user/user';
 import { LoginPage } from '../pages/login/login';
+import { LegalPage } from '../pages/legal/legal';
 import { ListDoctorsPage } from '../pages/doctors/list-doctors/list-doctors';
 import { DepartmentsPage } from '../pages/doctors/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
@@ -46,6 +47,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
+    LegalPage,
     ListDoctorsPage,
     DepartmentsPage,
     LanguesPage,
@@ -79,6 +81,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     TabsPage,
     UserPage,
     LoginPage,
+    LegalPage,
     ListDoctorsPage,
     DepartmentsPage,
     LanguesPage,

@@ -25,7 +25,7 @@
     "TITLE": "Our services",
     "DOCTORS": "Doctors",
     "INTERPRETERS": "Interpreters",
-    "HOTELS": "Transport",
+    "HOTELS": "Transportation",
     "TAXIS": "Taxis",
     "NURSES": "Nurses"
   },
@@ -68,6 +68,9 @@
     "APPOINTMENT": "MAKE AN APPOINTMENT",
     "NO_FEEDBACK": "No feedbacks for now"
   },
+  "BOOK_DOCTOR": {
+    "TITLE": "Make an appointment"
+  },
   "FORGOTTEN_PASSWORD": {
     "FORGOTTEN_PASSWORD": "Forgotten password",
     "TEXT": "We only need the email you gave us when you registered to send you the reset link.",
@@ -84,5 +87,9 @@
     "COMMENTS": "Send feedback",
     "CO": "Log in",
     "DECO": "Sign out"
+  },
+  "LEGAL": {
+    "INFO": "Informations légales",
+    "DESCRIPTION": "ITMP is an app designed for medical tourism, intended to help foreigners arriving in France in their efforts, both with doctors and adjacent services such as accommodation, transportation or interpreters."
   }
 }
