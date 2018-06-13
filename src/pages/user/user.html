@@ -8,19 +8,19 @@
   <h2>{{ 'USER.PROFILE' | translate }}</h2>
 
   <ul>
-    <li>{{ 'USER.INFOS' | translate }}</li>
-    <li>{{ 'USER.CHANGEPASS' | translate }}</li>
-    <li>{{ 'USER.SETTINGS' | translate }}</li>
+    <li><ion-icon name="information-circle"></ion-icon> {{ 'USER.INFOS' | translate }}</li>
+    <li><ion-icon name="keypad"></ion-icon> {{ 'USER.CHANGEPASS' | translate }}</li>
+    <li (click)="goToSettingsPage()"><ion-icon name="settings"></ion-icon> {{ 'USER.SETTINGS' | translate }}</li>
   </ul>
 
   <ul>
-    <li (click)="goToLegalPage()">{{ 'USER.LEGAL' | translate }}</li>
-    <li (click)="goToCommentsPage()">{{ 'USER.COMMENTS' | translate }}</li>
+    <li (click)="goToLegalPage()"><ion-icon name="book"></ion-icon> {{ 'USER.LEGAL' | translate }}</li>
+    <li (click)="goToCommentsPage()"><ion-icon name="text"></ion-icon> {{ 'USER.COMMENTS' | translate }}</li>
   </ul>
 
   <ul>
-    <li *ngIf="!isLoggedIn" (click)="goToLoginPage()">{{ 'USER.CO' | translate }}</li>
-    <li *ngIf="isLoggedIn" (click)="logout()">{{ 'USER.DECO' | translate }}</li>
+    <li *ngIf="!isLoggedIn" (click)="goToLoginPage()"><ion-icon name="md-log-in"></ion-icon> {{ 'USER.CO' | translate }}</li>
+    <li *ngIf="isLoggedIn" (click)="logout()"><ion-icon name="log-out"></ion-icon> {{ 'USER.DECO' | translate }}</li>
   </ul>
 
 </ion-content>

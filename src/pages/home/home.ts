@@ -32,7 +32,9 @@ export class HomePage {
   }
 
   goToComments() {
-    this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(3)).then(res => this.navCtrl.push(CommentsPage));
+    //this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(3)).then(res => this.navCtrl.push(CommentsPage));
+    this.navCtrl.parent.select(3).then(res => this.navCtrl.push(CommentsPage));
+    //(this.navCtrl.parent.select(3)).navCtrl.push(CommentsPage);
   }
 
   onSubmit(last, first, email, message) {

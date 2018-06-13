@@ -29,11 +29,6 @@ export class AppointmentsPage {
     this.navCtrl.push(LanguesPage);
   }
 
-  goToServices() {
-    //this.navCtrl.push(ServicesPage);
-    this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(1));
-  }
-
   
 
 }

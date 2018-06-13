@@ -1,0 +1,25 @@
+<ion-content>
+
+  <header>
+    <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+    <span>{{ 'USER.SETTINGS' | translate }}</span>
+  </header>
+
+  <h2>{{ 'SETTINGS.LANG' | translate }}</h2>
+
+  <ul>
+    <li (click)="changeLangFr()">Français</li>
+    <li (click)="changeLangEn()">English</li>
+    <li (click)="changeLangAr()">العربية</li>
+    <li (click)="changeLangRu()">русский</li>
+    <li></li>
+  </ul>
+
+  <h2>{{ 'SETTINGS.PUSH' | translate }}</h2>
+
+  <ul>
+    <li>{{ 'SETTINGS.NOTIF' | translate }}</li>
+    <li></li>
+  </ul>
+
+</ion-content>

@@ -4,6 +4,7 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { LoginPage } from '../login/login';
 import { LegalPage } from '../legal/legal';
 import { CommentsPage } from '../comments/comments';
+import { SettingsPage } from '../settings/settings';
 
 /**
  * Generated class for the UserPage page.
@@ -37,6 +38,10 @@ export class UserPage {
 
   goToLoginPage() {
     this.navCtrl.push(LoginPage);
+  }
+
+  goToSettingsPage() {
+    this.navCtrl.push(SettingsPage);
   }
 
   goToCommentsPage() {

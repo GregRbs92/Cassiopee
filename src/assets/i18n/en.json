@@ -2,7 +2,7 @@
   "TABS": {
     "HOME": "Home",
     "SERVICES": "Services",
-    "APPOINTMENTS": "My appointments",
+    "APPOINTMENTS": "Appointments",
     "ACCOUNT": "My account"
   },
   "HOME" : {
@@ -107,5 +107,10 @@
     "ADDRESS": "For any information, please contact:",
     "RENS": "FURTHER INFORMATION",
     "RIGHTS": "All rights reserved"
+  },
+  "SETTINGS": {
+    "LANG": "APP LANGUAGE",
+    "PUSH": "NOTIFICATIONS SETTINGS",
+    "NOTIF": "Enable push notifications"
   }
 }
