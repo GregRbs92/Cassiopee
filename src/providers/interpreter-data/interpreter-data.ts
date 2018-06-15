@@ -27,6 +27,10 @@ export class InterpreterDataProvider {
             return 1;
         });
 
+        interpreters.forEach(i => {
+          i.langues = JSON.parse(i.langues);
+        });
+
         return interpreters;
       });
   }

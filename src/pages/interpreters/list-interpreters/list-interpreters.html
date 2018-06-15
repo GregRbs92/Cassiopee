@@ -23,8 +23,8 @@
           <p class="name">{{ i.nom | uppercase }} {{ i.prenom }}</p>
           <p>{{ i.ville }}</p>
         </div>
-        <div class="interpreter-distance">
-          <p>{{ i.distance }}km</p>
+        <div class="interpreter-lang">
+          <img src="assets/imgs/flags/{{l}}.png" alt="{{l}}" *ngFor="let l of i.langues">
         </div>
       </div>
     </section>

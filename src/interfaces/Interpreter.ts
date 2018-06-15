@@ -10,6 +10,6 @@ export interface Interpreter {
   longitude:number,
   latitude:number,
   description: string,
-  langues: string[],
+  langues: string,
   distance:number
 }
