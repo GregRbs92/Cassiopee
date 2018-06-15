@@ -94,7 +94,23 @@ export class DoctorDataProvider {
             workerId: doctorId
           }
         )
-        .subscribe(res => resolve(res));
+        .subscribe(res => {
+          this.http.get<any>(`https://itmp-api.herokuapp.com/api/clients/${clientId}?access_token=${accessToken.token}`)
+          .subscribe(client => {
+            this.http.get<any>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}`)
+            .subscribe(docteur => {
+              this.http.post(`https://itmp-api.herokuapp.com/api/docteurs/send-appointment-email?access_token=${accessToken.token}`,
+              {
+                nom: client.username,
+                email: client.email,
+                doctorEmail: docteur.email,
+                startDate: start,
+                endDate: end,
+              })
+              .subscribe(success => resolve(success));
+            });
+          });
+        });
       });
     });
   }
