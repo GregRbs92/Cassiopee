@@ -3,5 +3,7 @@ export interface Appointment {
   title: string,
   type: string,
   startDate: Date,
-  endDate: Date
+  endDate: Date,
+  clientId: number,
+  workerId: number;
 }

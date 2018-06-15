@@ -4,9 +4,14 @@
 
   <section id="appointments">
     <p class="no-appointments" *ngIf="appointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
+    <div class="appointment" *ngFor="let a of appointments">
+      <p class="date">{{ a.startDate | date:'EEE d MMMM y' }}</p>
+      <div>&#x2022;</div>
+      <p class="hour">{{ a.startDate | date:'H:mm' }} - {{ a.endDate | date:'H:mm' }}</p>
+    </div>
   </section>
 
-  <div id="appointment" (click)="goToResearch()">
+  <div id="make_appointment" (click)="goToResearch()">
     <button>{{ 'SHOW_DOCTOR.APP' | translate }}</button>
   </div>
   

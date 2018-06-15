@@ -40,6 +40,7 @@ import { DoctorBookingPage } from '../pages/doctors/doctor-booking/doctor-bookin
 import { CalendarComponent } from '../components/calendar/calendar.component';
 import { CalendarFreeHoursComponent } from '../components/calendar-free-hours/calendar-free-hours.component';
 import { LanguesPage } from '../pages/interpreters/langues/langues';
+import { AppointmentProvider } from '../providers/appointment/appointment';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -113,7 +114,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DoctorDataProvider,
     InterpreterDataProvider,
     Geolocation,
-    NativeGeocoder
+    NativeGeocoder,
+    AppointmentProvider
   ]
 })
 export class AppModule {}

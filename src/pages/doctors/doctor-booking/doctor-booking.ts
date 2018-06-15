@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 import { Appointment } from '../../../interfaces/Appointment';
 import * as moment from 'moment-timezone';
 import { TranslateService } from '@ngx-translate/core';
+import { Storage } from '@ionic/storage';
+import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 
 /**
  * Generated class for the DoctorBookingPage page.
@@ -15,35 +17,19 @@ import { TranslateService } from '@ngx-translate/core';
   selector: 'page-doctor-booking',
   templateUrl: 'doctor-booking.html',
 })
-export class DoctorBookingPage {
+export class DoctorBookingPage implements OnInit {
 
   locale: string = 'fr';
-  events: Appointment[] = [
-    {
-      id: 0,
-      title: 'Rendez-vous avec le docteur',
-      type: 'docteur',
-      startDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').toDate(),
-      endDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').add(30, 'm').toDate()
-    },
-    {
-      id: 1,
-      title: 'Rendez-vous avec le docteur',
-      type: 'docteur',
-      startDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').add(2, 'd').toDate(),
-      endDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').add(2, 'd').add(30, 'm').toDate()
-    },
-    {
-      id: 2,
-      title: 'Rendez-vous avec le docteur',
-      type: 'docteur',
-      startDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').add(5, 'd').toDate(),
-      endDate: moment({y: 2018, M: 5, d: 7, h: 15}).tz('Europe/Paris').add(8, 'd').add(30, 'm').toDate()
-    }
-  ]
+  events: Appointment[] = [];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private translate: TranslateService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private translate: TranslateService, private docProvider: DoctorDataProvider) {
     this.locale = this.translate.currentLang;
+  }
+
+  ngOnInit() {
+    this.docProvider.getAppointments(this.navParams.get('doctorId')).then(a => {
+      this.events = a;
+    });
   }
 
   goBack() {
@@ -51,12 +37,13 @@ export class DoctorBookingPage {
   }
 
   book(dates: Date[]) {
-    this.events.push({
-      id: 3,
-      title: 'Rendez-vous avec le docteur',
-      type: 'docteur',
-      startDate: dates[0],
-      endDate: dates[1]
+    if (!this.navParams.get('doctorId')) return;
+
+    this.storage.get('access_token').then(at => {
+      this.docProvider.setAppointment('Doc', dates[0], dates[1], at.userId, this.navParams.get('doctorId'))
+        .then(appointment => {
+          alert('RDV réservé');
+        });
     });
   }
 

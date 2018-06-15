@@ -30,7 +30,7 @@ export class ShowDoctorPage {
   }
 
   goToBooking() {
-    this.navCtrl.push(DoctorBookingPage);
+    this.navCtrl.push(DoctorBookingPage, {doctorId: this.navParams.get('doctorId')});
   }
 
 }

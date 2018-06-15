@@ -5,6 +5,8 @@ import 'rxjs/add/operator/map';
 import { Observable } from "rxjs/Observable";
 import { DoctorSpeciality } from '../../interfaces/DoctorSpecialityInterface';
 import { Doctor } from '../../interfaces/Doctor';
+import { Appointment } from '../../interfaces/Appointment';
+import { Storage } from '@ionic/storage';
 
 
 /*
@@ -16,7 +18,7 @@ import { Doctor } from '../../interfaces/Doctor';
 @Injectable()
 export class DoctorDataProvider {
 
-  constructor(public http: HttpClient, private translate: TranslateService) {
+  constructor(public http: HttpClient, private translate: TranslateService, private storage: Storage) {
   }
 
   getSpecialities() {
@@ -77,6 +79,33 @@ export class DoctorDataProvider {
 
   getDoctor(doctorId: number) {
     return this.http.get<Doctor>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}`);
+  }
+
+  setAppointment(title, start, end, clientId, doctorId) {
+    return new Promise((resolve, reject) => {
+      this.storage.get('access_token').then(accessToken => {
+        this.http.post<Appointment>(`https://itmp-api.herokuapp.com/api/clients/${clientId}/appointments?access_token=${accessToken.token}`,
+          {
+            title: title,
+            type: 'docteur',
+            startDate: start,
+            endDate: end,
+            clientId: clientId,
+            workerId: doctorId
+          }
+        )
+        .subscribe(res => resolve(res));
+      });
+    });
+  }
+
+  getAppointments(doctorId: number): Promise<Appointment[]> {
+    return new Promise((resolve, reject) => {
+      this.storage.get('access_token').then(accessToken => {
+        this.http.get<Appointment[]>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}/appointments?access_token=${accessToken.token}`)
+        .subscribe(res => resolve(res));
+      });
+    });
   }
 
 }

@@ -1,22 +1,36 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DepartmentsPage } from '../doctors/departments/departments';
 import { LanguesPage } from '../interpreters/langues/langues';
-import { CommentsPage } from '../comments/comments';
 import { HttpClient } from '@angular/common/http';
+import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
+import { AppointmentProvider } from '../../providers/appointment/appointment';
+import { TranslateService } from '@ngx-translate/core';
+import { Appointment } from '../../interfaces/Appointment';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage implements OnInit {
 
-  appointments = [];
+  appointments: Appointment[] = [];
+  locale: string = this.translate.currentLang;
   sendingError:string;
   sendingSuccess: string;
   sending:boolean = false;
 
-  constructor(public navCtrl: NavController, private http: HttpClient) {
+  constructor(public navCtrl: NavController, private http: HttpClient, private translate: TranslateService, private auth: AuthServiceProvider, private rdv: AppointmentProvider) {}
+
+  ngOnInit() {
+    this.auth.isAuthenticated().then(isAuth => {
+      if (isAuth) {
+        this.rdv.getAppointments().then(res => {
+          console.log(res);
+          this.appointments = res;
+        });
+      }
+    });
   }
 
   goToResearch() {
@@ -32,9 +46,7 @@ export class HomePage {
   }
 
   goToComments() {
-    //this.navCtrl.popToRoot().then(res => this.navCtrl.parent.select(3)).then(res => this.navCtrl.push(CommentsPage));
-    this.navCtrl.parent.select(3).then(res => this.navCtrl.push(CommentsPage));
-    //(this.navCtrl.parent.select(3)).navCtrl.push(CommentsPage);
+    this.navCtrl.parent.select(3).then(res => console.log(res));
   }
 
   onSubmit(last, first, email, message) {
