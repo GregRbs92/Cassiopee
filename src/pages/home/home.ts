@@ -26,7 +26,6 @@ export class HomePage implements OnInit {
     this.auth.isAuthenticated().then(isAuth => {
       if (isAuth) {
         this.rdv.getAppointments().then(res => {
-          console.log(res);
           this.appointments = res;
         });
       }

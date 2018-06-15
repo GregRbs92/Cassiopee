@@ -44,7 +44,9 @@
   },
   "INTERPRETERS": {
     "TITLE": "Langues",
-    "INPUT_PLACEHOLDER": "Rechercher une langue"
+    "EN": "Anglais",
+    "AR": "Arabe",
+    "RU": "Russe"
   },
   "LIST_DOCTORS": {
     "TITLE": "Rechercher un docteur",

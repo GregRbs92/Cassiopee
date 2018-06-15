@@ -32,7 +32,7 @@ export class ListInterpretersPage implements OnInit {
 
   ngOnInit() {
     this.loading = true;
-    this.interpreterData.searchInterpreters(this.speciality, 48.858797, 2.333377).subscribe(interpreters => {
+    this.interpreterData.searchInterpreters(this.navParams.get('lang'), 48.858797, 2.333377).subscribe(interpreters => {
       this.loading = false;
       this.interpreters = interpreters;
     });
@@ -117,8 +117,8 @@ export class ListInterpretersPage implements OnInit {
     });
   }
 
-  showDoctor(id_doctor) {
-    this.navCtrl.push(ShowDoctorPage, {'doctorId': id_doctor});
+  showInterprete(interpreteId) {
+    this.navCtrl.push(ShowDoctorPage, {'interpreteId': interpreteId});
   }
 
 }

@@ -3,13 +3,21 @@
       <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
       <span>{{ 'INTERPRETERS.TITLE' | translate }}</span>
     </header>
-    <div id="search-bar">
-      <ion-icon name="search"></ion-icon>
-      <input type="text" placeholder="{{ 'INTERPRETERS.INPUT_PLACEHOLDER' | translate }}" (input)="filter($event)">
-    </div>
     <div id="langues">
-      <div class="langues" *ngFor="let l of langues" style="background-image: url('assets/imgs/homepage/paris.jpg')" (click)="goToInterpretersList(l[0])">
-        <label>{{ l[1] }}</label>
+      <div class="langue" style="background-image: url('assets/imgs/flags/en.png')" (click)="goToInterpretersList('en')">
+        <div class="black-veil">
+          <label>{{ 'INTERPRETERS.EN' | translate }}</label>
+        </div>
+      </div>
+      <div class="langue" style="background-image: url('assets/imgs/flags/ar.png')" (click)="goToInterpretersList('ar')">
+        <div class="black-veil">
+          <label>{{ 'INTERPRETERS.AR' | translate }}</label>
+        </div>
+      </div>
+      <div class="langue" style="background-image: url('assets/imgs/flags/ru.png')" (click)="goToInterpretersList('ru')">
+        <div class="black-veil">
+          <label>{{ 'INTERPRETERS.RU' | translate }}</label>
+        </div>
       </div>
     </div>
   </ion-content>

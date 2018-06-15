@@ -3,16 +3,16 @@
       <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
       <span>{{ 'LIST_INTERPRETERS.TITLE' | translate }}</span>
     </header>
-  
+
     <div id="location" (click)="toggleModal()">
       <ion-icon name="pin"></ion-icon>
       <span>{{ location | uppercase}}</span>
     </div>
-  
+
     <p class="loader" *ngIf="loading"><ion-spinner></ion-spinner></p>
-  
+
     <p *ngIf="interpreters && interpreters.length == 0"><em>Aucun interprete ne correspond à votre recherche.</em></p>
-  
+
     <section id="interpreters-list">
       <div class="interpreter" *ngFor="let i of interpreters" (click)="showDoctor(i.id)">
         <div class="interpreter-photo">
@@ -21,15 +21,15 @@
         </div>
         <div class="interpreter-infos">
           <p class="name">{{ i.nom | uppercase }} {{ i.prenom }}</p>
-          <p>{{ i.adresse }}</p>
+          <p>{{ i.ville }}</p>
         </div>
         <div class="interpreter-distance">
           <p>{{ i.distance }}km</p>
         </div>
       </div>
     </section>
-  
-  
+
+
     <div id="modal" *ngIf="isModalOpen">
       <ion-icon name="close" (click)="toggleModal()"></ion-icon>
       <div>
@@ -40,4 +40,4 @@
       </div>
     </div>
   </ion-content>
-²  
+²
