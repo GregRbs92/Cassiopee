@@ -5,7 +5,7 @@ import { NativeGeocoder, NativeGeocoderForwardResult } from '@ionic-native/nativ
 import { Geolocation } from '@ionic-native/geolocation';
 import { Interpreter } from '../../../interfaces/Interpreter';
 import { TranslateService } from '@ngx-translate/core';
-import { ShowDoctorPage } from '../../doctors/show-doctor/show-doctor';
+import { ShowInterpreterPage } from '../show-interpreter/show-interpreter';
 
 /**
  * Generated class for the ListInterpretersPage page.
@@ -117,8 +117,8 @@ export class ListInterpretersPage implements OnInit {
     });
   }
 
-  showInterprete(interpreteId) {
-    this.navCtrl.push(ShowDoctorPage, {'interpreteId': interpreteId});
+  showInterpreter(id_interpreter) {
+    this.navCtrl.push(ShowInterpreterPage, {'interpreterId': id_interpreter});
   }
 
 }

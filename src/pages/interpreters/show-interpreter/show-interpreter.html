@@ -1,0 +1,58 @@
+<ion-content>
+    <header>
+      <div>
+        <ion-icon name="arrow-round-back" (click)="goBack()"></ion-icon>
+        <span>{{ 'SHOW_INTERPRETER.TITLE' | translate }}</span>
+      </div>
+      <div>
+        <ion-icon name="mail"></ion-icon>
+      </div>
+    </header>
+  
+    <div id="general-infos-container">
+      <div id="profil-photo" style='background-image: url("assets/imgs/homepage/paris.jpg")'></div>
+      <div class="infos">
+        <p> {{ interpreter ? interpreter.prenom : '' }} {{ interpreter ? interpreter.nom : '' }}</p>
+        <p>{{ langues }}</p>
+        <p>{{ 'SHOW_INTERPRETER.EXPERIENCE' | translate:{years: '5+'} }}</p>
+        <br />
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star"></ion-icon>
+        <ion-icon name="star-half"></ion-icon>
+      </div>
+    </div>
+  
+    <div id="body">
+      <div id="location">
+        <h1>{{ 'SHOW_INTERPRETER.LOCATION' | translate }}</h1>
+        <div>
+          <h2>{{ interpreter ? interpreter.adresse : '' }}</h2>
+          <p>{{ interpreter ? interpreter.code_postal : '' }}, {{ interpreter ? interpreter.ville : '' }}</p>
+        </div>
+      </div>
+      <div id="skills">
+        <h1>{{ 'SHOW_INTERPRETER.SKILLS' | translate }}</h1>
+        <div>
+          <p>Traduction et interpretariat</p>
+        </div>
+      </div>
+      <div id="tarification">
+        <h1>{{ 'SHOW_INTERPRETER.RDV' | translate }}</h1>
+        <div>
+          <p>Traduction - 1 page de 250 mots - 55€</p>
+          <p>Interpretariat - 1h - 40€</p>
+        </div>
+      </div>
+      <div id="comments">
+        <h1>{{ 'SHOW_INTERPRETER.FEEDBACKS' | translate }} ({{ avis.length }})</h1>
+        <div>
+          <p *ngIf="avis.length === 0"><em>{{ 'SHOW_INTERPRETER.NO_FEEDBACK' | translate }}</em></p>
+        </div>
+      </div>
+    </div>
+  
+   
+  </ion-content>
+  

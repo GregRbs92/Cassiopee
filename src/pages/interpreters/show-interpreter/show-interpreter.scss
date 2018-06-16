@@ -1,0 +1,107 @@
+page-show-interpreter {
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #2db8bf;
+      color: #fff;
+      > div {
+        display: flex;
+        align-items: center;
+        span {
+          font-size: 1.3em;
+        }
+        ion-icon[name="arrow-round-back"] {
+          font-size: 3.2em;
+          margin-right: 10px;
+        }
+        ion-icon[name="mail"] {
+          font-size: 2.2em;
+        }
+      }
+    }
+  
+    #general-infos-container {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #2db8bf;
+      color: #fff;
+      > #profil-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        margin-right: 30px;
+        overflow: hidden;
+        background-position: center center;
+        background-size: cover;
+      }
+      > .infos {
+        p {
+          margin: 3px 0;
+        }
+        ion-icon {
+          color: #efce49;
+        }
+      }
+    }
+  
+    #body {
+      > div {
+        h1 {
+          font-size: 1.4rem;
+          margin-left: 20px;
+          color: #3498b2;
+          font-weight: bold;
+        }
+        > div {
+          color: #353535;
+          background-color: #f9f9f9;
+          padding: 10px 20px;
+        }
+      }
+      #location {
+        > div {
+          h2 {
+            margin-top: 0;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+          }
+          p {
+            margin: 0;
+          }
+        }
+      }
+      #skills {
+        > div {
+          p {
+            margin: .5em 0;
+          }
+        }
+      }
+    }
+  
+   /* #appointment {
+      position: fixed;
+      left: 0;
+      bottom: 50px;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      button {
+        background-color: #3864a5;
+        border: none;
+        border-radius: 3px;
+        width: 85%;
+        font-weight: lighter;
+        letter-spacing: 1px;
+        line-height: 35px;
+        color: #fff;
+      }
+    }*/
+  }

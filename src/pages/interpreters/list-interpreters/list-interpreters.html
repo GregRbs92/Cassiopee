@@ -14,7 +14,7 @@
     <p *ngIf="interpreters && interpreters.length == 0"><em>Aucun interprete ne correspond à votre recherche.</em></p>
 
     <section id="interpreters-list">
-      <div class="interpreter" *ngFor="let i of interpreters" (click)="showDoctor(i.id)">
+      <div class="interpreter" *ngFor="let i of interpreters" (click)="showInterpreter(i.id)">
         <div class="interpreter-photo">
           <div *ngIf="i.photo && i.photo != ''" class="photo-container"></div>
           <ion-icon *ngIf="!i.photo || i.photo == ''" name="contact"></ion-icon>
@@ -40,4 +40,3 @@
       </div>
     </div>
   </ion-content>
-²

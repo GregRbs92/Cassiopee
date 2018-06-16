@@ -83,6 +83,17 @@
     "APP": "Prendre rendez-vous",
     "NO_FEEDBACK": "Aucun avis pour le moment"
   },
+  "SHOW_INTERPRETER": {
+    "TITLE": "Profil de l'interprète",
+    "EXPERIENCE": "{{ years }} ans d'expérience",
+    "LOCATION": "LOCALISATION",
+    "SKILLS": "SPÉCIALISATIONS",
+    "RDV": "TARIFICATION",
+    "FEEDBACKS": "AVIS",
+    "APPOINTMENT": "PRENDRE RENDEZ-VOUS",
+    "APP": "Prendre rendez-vous",
+    "NO_FEEDBACK": "Aucun avis pour le moment"
+  },
   "BOOK_DOCTOR": {
     "TITLE": "Prendre rendez-vous"
   },

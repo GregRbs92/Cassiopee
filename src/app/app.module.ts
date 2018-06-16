@@ -33,6 +33,7 @@ import { ListInterpretersPage } from '../pages/interpreters/list-interpreters/li
 import { DepartmentsPage } from '../pages/doctors/departments/departments';
 import { ForgottenPasswordPage } from '../pages/forgotten-password/forgotten-password';
 import { ShowDoctorPage } from '../pages/doctors/show-doctor/show-doctor';
+import { ShowInterpreterPage } from '../pages/interpreters/show-interpreter/show-interpreter'; 
 import { ServicesPage } from '../pages/services/services';
 import { AppointmentsPage } from '../pages/appointments/appointments';
 import { DoctorBookingPage } from '../pages/doctors/doctor-booking/doctor-booking';
@@ -62,6 +63,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LanguesPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
+    ShowInterpreterPage,
     ServicesPage,
     AppointmentsPage,
     DoctorBookingPage,
@@ -100,6 +102,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     LanguesPage,
     ForgottenPasswordPage,
     ShowDoctorPage,
+    ShowInterpreterPage,
     ServicesPage,
     AppointmentsPage,
     DoctorBookingPage,
