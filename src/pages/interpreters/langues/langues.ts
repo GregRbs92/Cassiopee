@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
-import { InterpreterDataProvider } from '../../../providers/interpreter-data/interpreter-data';
 import { ListInterpretersPage } from '../../interpreters/list-interpreters/list-interpreters';
 
 /**
@@ -18,9 +17,7 @@ let langues;
 })
 export class LanguesPage {
 
-  langues: any[];
-
-  constructor(public navCtrl: NavController, public navParams: NavParams, private docProvider: InterpreterDataProvider) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   goBack() {

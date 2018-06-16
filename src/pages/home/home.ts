@@ -57,11 +57,12 @@ export class HomePage implements OnInit {
       this.sendingSuccess = "";
       this.sendingError = "";
       this.sending = true;
-      this.http.post(`http://localhost:8000/clients/send-contact-email`, {nom: last, prenom: first, email: email, message: message}).subscribe(() => {
+      this.http.post(`http://localhost:3000/api/clients/send-contact-email`, {"nom": last, "prenom": first, "email": email, "message": message}).subscribe(() => {
         this.sendingSuccess = "Votre message a bien été envoyé";
         this.sending = false;
       }, err => {
         this.sendingError = err.message;
+        this.sending = false;
       });
     }
   }

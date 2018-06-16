@@ -32,7 +32,8 @@
       </div>
       <input type="email" placeholder="{{ 'HOME.FORM.EMAIL' | translate }}" spellcheck="false" required #mail>
       <textarea placeholder="{{ 'HOME.FORM.MESSAGE' | translate }}" spellcheck="false" required #message></textarea>
-      <button type="submit">{{ 'HOME.FORM.SEND' | translate }}</button>
+      <button type="submit" *ngIf="!sending">{{ 'HOME.FORM.SEND' | translate }}</button>
+      <button *ngIf="sending"><ion-spinner></ion-spinner></button>
     </form>
   </section>
 </ion-content>
