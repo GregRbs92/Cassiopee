@@ -5,7 +5,7 @@
         <span>{{ 'SHOW_INTERPRETER.TITLE' | translate }}</span>
       </div>
       <div>
-        <ion-icon name="mail"></ion-icon>
+        <ion-icon name="mail" (click)="sendMail()"></ion-icon>
       </div>
     </header>
   
@@ -23,7 +23,7 @@
         <ion-icon name="star-half"></ion-icon>
       </div>
     </div>
-  
+
     <div id="body">
       <div id="location">
         <h1>{{ 'SHOW_INTERPRETER.LOCATION' | translate }}</h1>
@@ -52,7 +52,6 @@
         </div>
       </div>
     </div>
-  
-   
+
+
   </ion-content>
-  

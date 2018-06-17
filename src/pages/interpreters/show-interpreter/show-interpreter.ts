@@ -5,6 +5,8 @@ import { InterpreterDataProvider } from '../../../providers/interpreter-data/int
 import { TranslateService } from '@ngx-translate/core';
 import { Interpreter } from '../../../interfaces/Interpreter';
 
+import { ContactIntPage } from '../contact-int/contact-int';
+
 @Component({
   selector: 'page-show-interpreter',
   templateUrl: 'show-interpreter.html',
@@ -29,5 +31,8 @@ export class ShowInterpreterPage {
     this.navCtrl.pop();
   }
 
+  sendMail() {
+    this.navCtrl.push(ContactIntPage);
+  }
 
 }

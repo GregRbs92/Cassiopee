@@ -25,8 +25,8 @@
     "TITLE": "Our services",
     "DOCTORS": "Doctors",
     "INTERPRETERS": "Interpreters",
-    "HOTELS": "Transportation",
-    "TAXIS": "Taxis",
+    "HOTELS": "Accomodation",
+    "TAXIS": "Transportation",
     "NURSES": "Nurses"
   },
   "LOGIN": {
@@ -44,7 +44,12 @@
   },
   "INTERPRETERS": {
     "TITLE": "Language",
-    "INPUT_PLACEHOLDER": "Search for a language"
+    "EN": "English",
+    "AR": "Arabic",
+    "RU": "Russian",
+    "CONTACT": "Contact an interpreter",
+    "PASASAPLACE": "Contact a doctor",
+    "CONTACT2": "Write your message below:"
   },
   "LIST_DOCTORS": {
     "TITLE": "Search for a doctor",
@@ -72,6 +77,17 @@
   },
   "SHOW_DOCTOR": {
     "TITLE": "Doctor profile",
+    "EXPERIENCE": "{{ years }} years of experience",
+    "LOCATION": "LOCATION",
+    "SKILLS": "SKILLS",
+    "RDV": "CONSULTATIONS",
+    "FEEDBACKS": "FEEDBACKS",
+    "APPOINTMENT": "MAKE AN APPOINTMENT",
+    "APP": "Make an appointment",
+    "NO_FEEDBACK": "No feedbacks for now"
+  },
+  "SHOW_INTERPRETER": {
+    "TITLE": "Interpreter profile",
     "EXPERIENCE": "{{ years }} years of experience",
     "LOCATION": "LOCATION",
     "SKILLS": "SKILLS",

@@ -4,6 +4,7 @@ import { Doctor } from '../../../interfaces/Doctor';
 import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 import { TranslateService } from '@ngx-translate/core';
 import { DoctorBookingPage } from '../doctor-booking/doctor-booking';
+import { ContactDocPage } from '../contact-doc/contact-doc';
 
 @Component({
   selector: 'page-show-doctor',
@@ -31,6 +32,10 @@ export class ShowDoctorPage {
 
   goToBooking() {
     this.navCtrl.push(DoctorBookingPage, {doctorId: this.navParams.get('doctorId')});
+  }
+
+  sendMail() {
+    this.navCtrl.push(ContactDocPage);
   }
 
 }

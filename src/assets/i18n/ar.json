@@ -44,7 +44,12 @@
   },
   "INTERPRETERS": {
     "TITLE": "لغة",
-    "INPUT_PLACEHOLDER": "ابحث عن لغة"
+    "EN": "الإنجليزية",
+    "AR": "العربية",
+    "RU": "الروسية",
+    "CONTACT": "اتصل بمترجم",
+    "PASASAPLACE": "اتصل بطبيب",
+    "CONTACT2": ":اكتب رسالتك أدناه"
   },
   "LIST_DOCTORS": {
     "TITLE": "ابحث عن طبيب",
@@ -72,6 +77,17 @@
   },
   "SHOW_DOCTOR": {
     "TITLE": "الملف الشخصي للطبيب",
+    "EXPERIENCE": "{{years}} من سنوات الخبرة",
+    "LOCATION": "الموقع",
+    "SKILLS": "مهارات",
+    "RDV": "المشاورات",
+    "FEEDBACKS": "إشعار",
+    "APPOINTMENT": "تحديد موعد",
+    "APP": "تحديد موعد",
+    "NO_FEEDBACK": "لا يوجد تقييم في الوقت الحالي"
+  },
+  "SHOW_INTERPRETER": {
+    "TITLE": "ملف مترجم",
     "EXPERIENCE": "{{years}} من سنوات الخبرة",
     "LOCATION": "الموقع",
     "SKILLS": "مهارات",

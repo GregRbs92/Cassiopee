@@ -1,0 +1,78 @@
+page-contact-int {
+  header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #2db8bf;
+    color: #fff;
+    ion-icon {
+      font-size: 3.2em;
+    }
+    span {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 1.3em;
+    }
+  }
+
+  h2 {
+    font-size: 15px;
+    font-weight: bold;
+    color: #426599;
+    text-transform: uppercase;
+    margin-left: 15px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 30px 0;
+    li {
+      margin: 15px 0;
+      padding: 5px 0;
+      letter-spacing: .5px;
+      color: #555;
+    }
+  }
+  #contact {
+    padding: 20px;
+    h1 {
+      color: #1ca74a;
+      margin-top: 0.5rem;
+      margin-bottom: 20px;
+      font-size: 1.8em;
+      font-weight: normal;
+    }
+    form {
+      > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        input {
+          width: 48%;
+        }
+      }
+      input, textarea {
+        border: 1px solid #eee;
+        width: 100%;
+        padding: 10px 15px;
+        margin-bottom: 25px;
+      }
+      textarea {
+        height: 150px;
+        resize: none;
+      }
+      button {
+        width: 100%;
+        padding: 13px;
+        background-color: #3acfd5;
+        color: #fff;
+        font-size: 1.2em;
+        border-radius: 3px;
+        box-shadow: 0px 2px 7px #999;
+      }
+    }
+  }
+}

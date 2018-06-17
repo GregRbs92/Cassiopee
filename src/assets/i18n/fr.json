@@ -46,7 +46,10 @@
     "TITLE": "Langues",
     "EN": "Anglais",
     "AR": "Arabe",
-    "RU": "Russe"
+    "RU": "Russe",
+    "CONTACT": "Contacter un interprète",
+    "PASASAPLACE": "Contacter un docteur",
+    "CONTACT2": "Écrivez votre message ci-dessous :"
   },
   "LIST_DOCTORS": {
     "TITLE": "Rechercher un docteur",
