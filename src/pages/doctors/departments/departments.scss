@@ -20,27 +20,24 @@ page-departments {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
-    border: 8px solid #dadada;
+    margin: 30px 20px;
     border-top-width: 6px;
     border-bottom-width: 6px;
     ion-icon {
-      width: 40px;
-      padding: 5px 10px;
+      padding-right: 15px;
       text-align: center;
-      font-size: 1.8em;
+      font-size: 2.5em;
     }
     input {
       border: 0;
-      width: calc(100% - 50px);
-      font-size: 16px;
+      border-bottom: 1px solid #aaa;
+      flex: 1;
+      font-size: 20px;
     }
   }
 
   #departments {
-    width: 85%;
-    margin: auto;
-    padding: 30px 0;
+    margin: 0 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

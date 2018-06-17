@@ -5,6 +5,7 @@ import * as moment from 'moment-timezone';
 import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
+import { Doctor } from '../../../interfaces/Doctor';
 
 /**
  * Generated class for the DoctorBookingPage page.
@@ -20,7 +21,12 @@ import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 export class DoctorBookingPage implements OnInit {
 
   locale: string = 'fr';
+  m = moment;
   events: Appointment[] = [];
+  dates: Date[] = [];
+  doctor: Doctor;
+  isModalOpened: boolean = false;
+  loading: boolean = false;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private storage: Storage, private translate: TranslateService, private docProvider: DoctorDataProvider) {
     this.locale = this.translate.currentLang;
@@ -30,19 +36,38 @@ export class DoctorBookingPage implements OnInit {
     this.docProvider.getAppointments(this.navParams.get('doctorId')).then(a => {
       this.events = a;
     });
+
+    this.docProvider.getDoctor(this.navParams.get('doctorId')).subscribe(doc => {
+      this.doctor = doc;
+    });
   }
 
   goBack() {
     this.navCtrl.pop();
   }
 
-  book(dates: Date[]) {
+  onFreeTimeClick(dates: Date[]) {
+    this.dates = dates;
+    this.isModalOpened = true;
+  }
+
+  closeModal() {
+    this.dates = [];
+    this.isModalOpened = false;
+  }
+
+  book() {
     if (!this.navParams.get('doctorId')) return;
+    if (!this.dates) return;
+
+    this.loading = true;
+    const dates = this.dates;
 
     this.storage.get('access_token').then(at => {
       this.docProvider.setAppointment('Doc', dates[0], dates[1], at.userId, this.navParams.get('doctorId'))
         .then(appointment => {
           alert('RDV réservé');
+          this.navCtrl.popToRoot();
         });
     });
   }

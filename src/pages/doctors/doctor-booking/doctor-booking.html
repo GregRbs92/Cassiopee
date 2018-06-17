@@ -13,7 +13,20 @@
   [endHour]="17"
   [interval]="90"
   [freeDays]="[0]"
-  (freeTimeClicked)="book($event)"
+  (freeTimeClicked)="onFreeTimeClick($event)"
   ></app-calendar>
+
+  <div id="modal" *ngIf="isModalOpened && dates">
+    <div id="confirmation" *ngIf="!loading">
+      <h2>Réserver le rendez-vous :</h2>
+      <p>{{ m(dates[0]).tz('Europe/Paris').format('LLLL') | capitalize }}</p>
+      <hr>
+      <p>{{ m(dates[1]).tz('Europe/Paris').format('LLLL') | capitalize }}</p>
+      <button (click)="book()">Confirmer</button>
+      <button class="deny" (click)="closeModal()">Refuser</button>
+    </div>
+
+    <ion-spinner *ngIf="loading"></ion-spinner>
+  </div>
 
 </ion-content>
