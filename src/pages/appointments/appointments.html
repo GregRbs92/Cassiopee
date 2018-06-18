@@ -3,16 +3,29 @@
   <h1>{{ 'HOME.YOUR_APPOINTMENTS' | translate }}</h1>
 
   <section id="appointments">
-    <p class="no-appointments" *ngIf="appointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
-    <div class="appointment" *ngFor="let a of appointments">
+    <p class="no-appointments" *ngIf="nextAppointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
+    <div class="appointment" *ngFor="let a of nextAppointments">
       <p class="date">{{ a.startDate | date:'EEE d MMMM y' }}</p>
       <div>&#x2022;</div>
       <p class="hour">{{ a.startDate | date:'H:mm' }} - {{ a.endDate | date:'H:mm' }}</p>
     </div>
+
+    <p class="show-previous" *ngIf="!showPrevious" (click)="showPrevious = true">{{ 'APPOINTMENTS.SHOW_PREVIOUS' | translate }}</p>
+
+    <div class="ancient" *ngIf="showPrevious">
+      <h1>{{ 'APPOINTMENTS.FORMER_APPOINTMENTS' | translate }}</h1>
+      <p class="no-appointments" *ngIf="previousAppointments.length === 0"><em>{{ 'HOME.NO_APPOINTMENTS' | translate }}</em></p>
+      <div class="appointment" *ngFor="let a of previousAppointments">
+        <p class="date">{{ a.startDate | date:'EEE d MMMM y' }}</p>
+        <div>&#x2022;</div>
+        <p class="hour">{{ a.startDate | date:'H:mm' }} - {{ a.endDate | date:'H:mm' }}</p>
+      </div>
+    </div>
   </section>
+
 
   <div id="make_appointment" (click)="goToResearch()">
     <button>{{ 'SHOW_DOCTOR.APP' | translate }}</button>
   </div>
-  
+
 </ion-content>

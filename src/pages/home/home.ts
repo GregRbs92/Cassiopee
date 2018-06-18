@@ -7,6 +7,7 @@ import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
 import { AppointmentProvider } from '../../providers/appointment/appointment';
 import { TranslateService } from '@ngx-translate/core';
 import { Appointment } from '../../interfaces/Appointment';
+import * as moment from 'moment-timezone';
 
 @Component({
   selector: 'page-home',
@@ -26,7 +27,13 @@ export class HomePage implements OnInit {
     this.auth.isAuthenticated().then(isAuth => {
       if (isAuth) {
         this.rdv.getAppointments().then(res => {
-          this.appointments = res;
+          let appointments = [];
+          res.forEach(a => {
+            if (moment(a.startDate).tz('Europe/Paris').isAfter(moment().tz('Europe/Paris'))) {
+              appointments.push(a);
+            }
+          });
+          this.appointments = appointments;
         });
       }
     });

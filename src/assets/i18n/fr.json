@@ -129,5 +129,9 @@
     "LANG": "LANGUE DE L'APPLICATION",
     "PUSH": "PARAMÈTRES DES NOTIFICATIONS",
     "NOTIF": "Activer les notifications push"
+  },
+  "APPOINTMENTS": {
+    "FORMER_APPOINTMENTS": "Anciens rendez-vous",
+    "SHOW_PREVIOUS": "Voir les anciens rendez-vous"
   }
 }
