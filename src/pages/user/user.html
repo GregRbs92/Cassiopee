@@ -20,7 +20,7 @@
 
   <ul>
     <li *ngIf="!isLoggedIn" (click)="goToLoginPage()"><ion-icon name="md-log-in"></ion-icon> {{ 'USER.CO' | translate }}</li>
-    <li *ngIf="isLoggedIn" (click)="logout()"><ion-icon name="log-out"></ion-icon> {{ 'USER.DECO' | translate }}</li>
+    <li *ngIf="isLoggedIn" (click)="logout()"><ion-icon name="md-log-out"></ion-icon> {{ 'USER.DECO' | translate }}</li>
   </ul>
 
 </ion-content>
