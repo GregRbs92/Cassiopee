@@ -9,9 +9,9 @@
   [events]="events"
   [locale]="locale"
   [showFreeTime]="true"
-  [startHour]="9"
-  [endHour]="17"
-  [interval]="90"
+  [startHour]="doctor.startHour || 8"
+  [endHour]="doctor.endHour || 18"
+  [interval]="consultation.duree"
   [freeDays]="[0]"
   (freeTimeClicked)="onFreeTimeClick($event)"
   ></app-calendar>

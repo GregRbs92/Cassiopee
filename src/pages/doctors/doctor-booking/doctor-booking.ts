@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { Storage } from '@ionic/storage';
 import { DoctorDataProvider } from '../../../providers/doctor-data/doctor-data';
 import { Doctor } from '../../../interfaces/Doctor';
+import { Consultation } from '../../../interfaces/Consultation';
 
 /**
  * Generated class for the DoctorBookingPage page.
@@ -25,6 +26,7 @@ export class DoctorBookingPage implements OnInit {
   events: Appointment[] = [];
   dates: Date[] = [];
   doctor: Doctor;
+  consultation: Consultation;
   isModalOpened: boolean = false;
   loading: boolean = false;
 
@@ -33,12 +35,11 @@ export class DoctorBookingPage implements OnInit {
   }
 
   ngOnInit() {
-    this.docProvider.getAppointments(this.navParams.get('doctorId')).then(a => {
-      this.events = a;
-    });
+    this.doctor = this.navParams.get('doctor');
+    this.consultation = this.navParams.get('consultation');
 
-    this.docProvider.getDoctor(this.navParams.get('doctorId')).subscribe(doc => {
-      this.doctor = doc;
+    this.docProvider.getAppointments(this.doctor.id).then(a => {
+      this.events = a;
     });
   }
 

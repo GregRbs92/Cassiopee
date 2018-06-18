@@ -81,6 +81,37 @@ page-show-doctor {
         }
       }
     }
+
+    #consultations {
+      > .error {
+        padding-left: 20px;
+      }
+      .consultation {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+        border-bottom: .5px solid #ccc;
+        &:last-child {
+          border-bottom: none;
+        }
+        > p {
+          flex: 1;
+          margin: 0;
+        }
+        .check-box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 30px;
+          color: #1ca74a;
+          margin-left: 10px;
+          height: 30px;
+          width: 30px;
+          border-radius: 100%;
+          border: .5px solid #555;
+        }
+      }
+    }
   }
 
   #appointment {

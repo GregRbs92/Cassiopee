@@ -40,9 +40,14 @@
     </div>
     <div id="consultations">
       <h1>{{ 'SHOW_DOCTOR.RDV' | translate }}</h1>
+      <p class="error" *ngIf="showBookingWarning">Veuillez sélectionner la consultation que vous désirez</p>
       <div>
-        <p>Consultation pré-opération - 1h30 - 86€</p>
-        <p>Échographie - 45min - 70€</p>
+        <div class="consultation" *ngFor="let c of consultations" (click)="selectedConsultation = c">
+          <p>{{ c[locale] }}  -  {{ c.duree | mToHm }}  -  {{ c.prix }}&euro;</p>
+          <div class="check-box">
+            <ion-icon name="checkmark" *ngIf="selectedConsultation && c.id === selectedConsultation.id"></ion-icon>
+          </div>
+        </div>
       </div>
     </div>
     <div id="comments">

@@ -45,6 +45,7 @@ import { CalendarFreeHoursComponent } from '../components/calendar-free-hours/ca
 import { LanguesPage } from '../pages/interpreters/langues/langues';
 import { AppointmentProvider } from '../providers/appointment/appointment';
 import { CapitalizePipe } from '../pipes/capitalize';
+import { mToHmPipe } from '../pipes/mToHm';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, "assets/i18n/", ".json");
@@ -74,7 +75,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     DoctorBookingPage,
     CalendarComponent,
     CalendarFreeHoursComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    mToHmPipe
   ],
   imports: [
     BrowserModule,

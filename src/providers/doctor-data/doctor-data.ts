@@ -7,6 +7,7 @@ import { DoctorSpeciality } from '../../interfaces/DoctorSpecialityInterface';
 import { Doctor } from '../../interfaces/Doctor';
 import { Appointment } from '../../interfaces/Appointment';
 import { Storage } from '@ionic/storage';
+import { Consultation } from '../../interfaces/Consultation';
 
 
 /*
@@ -79,6 +80,10 @@ export class DoctorDataProvider {
 
   getDoctor(doctorId: number) {
     return this.http.get<Doctor>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}`);
+  }
+
+  getConsultations(doctorId: number) {
+    return this.http.get<Consultation[]>(`https://itmp-api.herokuapp.com/api/docteurs/${doctorId}/consultations`);
   }
 
   setAppointment(title, start, end, clientId, doctorId) {
