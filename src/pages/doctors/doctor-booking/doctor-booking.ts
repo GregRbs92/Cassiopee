@@ -65,7 +65,7 @@ export class DoctorBookingPage implements OnInit {
     const dates = this.dates;
 
     this.storage.get('access_token').then(at => {
-      this.docProvider.setAppointment('Doc', dates[0], dates[1], at.userId, this.navParams.get('doctorId'))
+      this.docProvider.setAppointment('Doc', dates[0], dates[1], at.userId, this.doctor.id)
         .then(appointment => {
           alert('RDV réservé');
           this.navCtrl.popToRoot();
