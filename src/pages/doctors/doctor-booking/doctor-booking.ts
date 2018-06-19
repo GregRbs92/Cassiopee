@@ -58,7 +58,7 @@ export class DoctorBookingPage implements OnInit {
   }
 
   book() {
-    if (!this.navParams.get('doctorId')) return;
+    if (!this.navParams.get('doctor')) return;
     if (!this.dates) return;
 
     this.loading = true;
